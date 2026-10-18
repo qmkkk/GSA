@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "dataset": "scannet",
+  "model": "pointvector",
+  "scene": "scene0278_01_inst_nostuff",
+  "seed": 20261068,
+  "voxel_n": 58218,
+  "input_sha256": "c28be196d02ff9d982858fc6fed4b2062a0025daa7ca9af9565ecc27c75eaaf5",
+  "source_data_sha256": "43013a91d1fe7532383abc611a2805beeaecc72b5b266b90ce30af44fbd27a64",
+  "reference_logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba",
+  "all_logits_bitexact": true,
+  "methods": {
+    "flash": [
+      {
+        "repeat": 0,
+        "wall_ms": 108.45689999769093,
+        "gpu_ms": 108.38902282714844,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 108.91439999977592,
+        "gpu_ms": 108.83097839355469,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 108.66030000033788,
+        "gpu_ms": 108.56348419189453,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 108.5665999999037,
+        "gpu_ms": 108.49932861328125,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 108.81330000120215,
+        "gpu_ms": 108.7465591430664,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      }
+    ],
+    "frozen": [
+      {
+        "repeat": 0,
+        "wall_ms": 62.3883999978716,
+        "gpu_ms": 62.32476806640625,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 62.7468000020599,
+        "gpu_ms": 62.68268966674805,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 61.84969999958412,
+        "gpu_ms": 61.81212615966797,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 62.28170000031241,
+        "gpu_ms": 62.183902740478516,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 62.99360000048182,
+        "gpu_ms": 62.94300842285156,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      }
+    ],
+    "session": [
+      {
+        "repeat": 0,
+        "wall_ms": 66.19510000018636,
+        "gpu_ms": 66.15325164794922,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 65.91309999930672,
+        "gpu_ms": 65.8748779296875,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 65.17569999778061,
+        "gpu_ms": 65.14431762695312,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 65.71030000122846,
+        "gpu_ms": 65.66989135742188,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 65.86059999972349,
+        "gpu_ms": 65.79804992675781,
+        "logits_sha256": "8ff8046495b732c0fe0181dc2b2024635b0b91e6161b180ed1d491b97aeae0ba"
+      }
+    ]
+  },
+  "counters": {
+    "flash": {},
+    "frozen": {
+      "builds": 2,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "cache_bytes": 2473984,
+      "fallbacks": 0
+    },
+    "session": {
+      "builds": 2,
+      "tree_reuses": 3,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "coordinate_comparisons": 25,
+      "snapshot_bytes": 1293480,
+      "cache_bytes": 4336896,
+      "fallbacks": 0
+    }
+  }
+}

@@ -1,0 +1,2293 @@
+{
+  "status": "PASS",
+  "dataset": "s3dis",
+  "model": "pointvector",
+  "scene": "Area_5_office_23",
+  "seed": 20261070,
+  "protocol": "Official full multi_voxel, every raw point covered, mean-logit merge at raw indices. Every voxel-pass full logit tensor must match bit for bit across three methods.",
+  "raw_n": 897251,
+  "valid_n": 897251,
+  "voxel_n": 61117,
+  "multi_voxel_passes": 59,
+  "all_pass_logits_bitexact": true,
+  "input_sequence_sha256": "e4d745b174bdd64ec19dddf1ad8be51d40d952fcf098029ebad140016986e0c0",
+  "pass_logits_sha256": [
+    "661332709a119cfc4d937237dd8bec19a16198a9919a2fa702350ada8bc891d9",
+    "7794a45d69d74cadb719d342eb98d97a275ecd04b54dbe4f6130862ad03781dc",
+    "524754342dda4c2069ca2ad9277b6f31de3398d88007b7039a837f9de7ef690d",
+    "e8876b7c3ae20945e1f44f11f819b007ec262dd219f84dc386252e06f422baaf",
+    "84eaef51793d799821e5bd16b447d8c77089a8f970630bb22b251552f5d52a65",
+    "ea8b1fe952b1121a9e5ad813e7870e5c085bcc4bac24eb537aa7f1d90acdb04f",
+    "d19da62058690674ea3293d9a37e8517f62e832ce0a701953ac14a4908455fb1",
+    "c0f64f243c819403deeb338490f2746e59c2141be2ecf57dd643ae5bdf634b5f",
+    "9543a57c341af146508773bb29f6b1fd0f59a76fadde06065b853427466a4b56",
+    "c4a8c3d73bd3619a724af12944cf23af8e5ba20e9a38bc643648d3fb7c08d8fe",
+    "ec1bd8038a3c02fecd789901bf6b46134757cd704dfd514055f35696a8bcd2a0",
+    "9098dc43a069c527b6d5f3471c0e6c24c89d13dbd9624b91f1c07aae1c5ff4cf",
+    "793963eba7b9afd6435cf7addde9e3742fd96a3a8e3f29f975d4cccccc885caf",
+    "33321541e46a86277a139a2b5f7cc7f7d741e245349c2da025a6d98a7c4cfe6d",
+    "14fdae60bebaa36f7abaca8bf57e6c6cc48c01cd12880846e6668bbbf1bcc134",
+    "1478d1677aa85d8f35ac07fb3c68d630664f3465d0ffa20b89859ce5479c11df",
+    "47c5e4ee3079c20fbb11725ae49fe8e8066b6481a243d256badb59cd35608f1f",
+    "4fca99cd8e01562251d511dd171980b6219977dbad3a79e59592f80555e148fd",
+    "257985735692118e7e84c634a02fd54b3431e1c37d62df6219bb570848cde869",
+    "8a21dccc6c3700bfecf6497b28b669f6034d866b8a808a7845bbbb35f71d04ed",
+    "aca07e18ff7580ecbccbb6ceb037db3ef00b10177f1af91b49c66b82970f3c08",
+    "91ca29c8c7d5d1543c936a077a299928c97cf50af65810de948ef13cfe9b9ff5",
+    "9f3db9619723f42ede0feeaf86fadf5be6d7333d76905eab9d2795535ed841ca",
+    "079856cd09aa7bf031b3274c6bf70032edde9ef921c4eecbb4b6e813095c0e72",
+    "8405ad36ac5a11605218f06a3c38c4debbf9cf0e3b38b879c19bc9557df23a33",
+    "66f72a2dfd4328fdb79578330335a92823901a333bb515460168f97f64dc4472",
+    "9dd4784f661a80427a8d0a08549fcb1816a0427c77d7942ac6d360a3966f3821",
+    "784bd7498411de23b3d31d3d2149ef22d4474f7dcb131943e9af9124e4914fcc",
+    "3a9558c6391b36a0c3e8cb1635bb14e058e6a59dabda8505eb95cfab80c218aa",
+    "12f57330c0de84dc26009163fdcec71bfda32b52fe88c8475593b57a86814fcd",
+    "5ef746773cddfe9578bc2934f0f76cf0e0b83adab4866a9d1ac43ee8cf03befc",
+    "030fb41b770b2db77e73064361af56873bbd96db5c437943ba827152a18d19fe",
+    "6c34411bab6b3f63432830f22f2d69ba4a7320ae73b45920e89f9a2206123b13",
+    "b6e5b54cd8e3ac3095bc1606aa10fc349684435f295cb7b464848f0058d5b034",
+    "d7846c190b3f643817768ee5489932302bb12a5f7ef1b1b9813a1b97bcb045ca",
+    "9867e007fe9a69c6c4d1331612dfe242599e1b6c9707005a2d4926ef74fca25f",
+    "c19c95aaf4a786f6be9c5e031965ef2e86d890c2fdff372dc837637465d968f2",
+    "2650dd915ef2b7d7105ef7eff86e43d5ac7b7a15bd27da928243910a1db10232",
+    "e7fbf6788e769305d3fe4c8d0eba18d633ac2112ff85d790482363e3e0af0131",
+    "80a2f3a55bb657a97911ac49e4a3127e47c58dc749f99bbcbdc1308d2053b8de",
+    "80e420485faa93898f0ed783191ba93dbe3f3dfad71e70152a0db005a863a2eb",
+    "0eeba9ceb24eb7455b7a8a6d00faed4c08fa7d3392a39aaca16da6f2124de03a",
+    "25118bdc2fcf9e1bc5ce4e4bfe176487c9fda6716cee0bdc1829e080627abc46",
+    "9f0607a692f00757d183fffa7cbebfd52f8504e03b7dfffe1a53c3a1d74ec066",
+    "f2d1684e007be0b06d8b0b4b8804518fb4ae24eaded4f4293b5373bb14fe017e",
+    "023caa0d2e0424d438d761f160a0aee20e1f6ff2b491441f3db4c0810d6598ae",
+    "f2cfb2b2596e1e45d0b28114992dac3c65b48bc5380ce94ed253cd9568780dc4",
+    "5cb88c54f1268a0b8f9567802afd3c00d831728e57f8296a9dd89751730a257d",
+    "65a5eac96be5a9787ae130475c14482508d7c0411fe303bbf4ac7a36734441c6",
+    "52956cc8adcf8f73642e806dbc415614828ab6c02cb70e68359964c806813efc",
+    "dd189379a11b85927fad7ab746fb4da7a58ab268a10563c8ae43e28d030b5785",
+    "d1105dc54a9f357f2dfe5fc9d4892c263bbec92e0d135bced7df9b6d978c2361",
+    "666f365271c41377aae36f24bb3dd8b7b3894a10a8235b4cbd4c883e35e788c2",
+    "57a3db3eb0b4be87ad0974521c30ce0633bfc7df78a2ad5068639605155cadd7",
+    "5dadb389fd5aa4c8fc5a83194a7d9392ba611b701a69ed749184c02f9dea5a55",
+    "9040c2d905fecd140c3bf64b418405977e16c5885e1208b1e5f1efe61403e5ba",
+    "cbca49d4ce9915140b0246595fec79bab262cc718615dbe38811992599f84744",
+    "2e803ec481e359fce398d7d2be431ca90319519081c08566f71c2ecf73c51641",
+    "4612d4a4d1717cc4140171edad57fe16af6abb2f37c4bac75e44e5f796a3f4ce"
+  ],
+  "source_data_sha256": "4b29af8d5098c8b90d2a1d39b480fb3e143cec00513baa04a99dcf065d5b991e",
+  "methods": {
+    "flash": {
+      "prediction_sha256": "2d0483fdb32ac2ebf1668f4f5ff4d679cbd75c05fc75eae8128f5c9683ea35f2",
+      "confusion": [
+        [
+          141171,
+          0,
+          877,
+          13,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          842
+        ],
+        [
+          0,
+          92577,
+          62,
+          0,
+          0,
+          0,
+          60,
+          73,
+          222,
+          0,
+          96,
+          0,
+          90
+        ],
+        [
+          807,
+          273,
+          197245,
+          2734,
+          411,
+          0,
+          1626,
+          1071,
+          0,
+          0,
+          556,
+          25,
+          2476
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          5687,
+          52,
+          2946,
+          0,
+          0,
+          0,
+          0,
+          0,
+          812,
+          0,
+          178
+        ],
+        [
+          99,
+          0,
+          19640,
+          5,
+          47,
+          61187,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          110
+        ],
+        [
+          0,
+          96,
+          1442,
+          0,
+          0,
+          0,
+          25689,
+          0,
+          0,
+          0,
+          0,
+          38,
+          0
+        ],
+        [
+          0,
+          104,
+          261,
+          0,
+          0,
+          0,
+          0,
+          49517,
+          193,
+          0,
+          17,
+          0,
+          322
+        ],
+        [
+          0,
+          1084,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1196,
+          29300,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          236,
+          759,
+          0,
+          0,
+          0,
+          0,
+          78,
+          0,
+          0,
+          166777,
+          1,
+          1606
+        ],
+        [
+          0,
+          0,
+          1400,
+          0,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          787,
+          22347,
+          0
+        ],
+        [
+          1322,
+          316,
+          682,
+          0,
+          0,
+          0,
+          0,
+          3022,
+          0,
+          0,
+          576,
+          0,
+          53880
+        ]
+      ],
+      "mIoU_all_classes": 70.78226429422786,
+      "OA": 93.91307449086153,
+      "raw_point_visit_min": 1,
+      "timings": [
+        {
+          "pass": 0,
+          "gpu_ms": 114.6982421875,
+          "wall_ms": 114.79200000030687,
+          "download_and_merge_seconds": 0.020243200000550132,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 1,
+          "gpu_ms": 114.74674987792969,
+          "wall_ms": 114.82009999963338,
+          "download_and_merge_seconds": 0.006933099999514525,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 2,
+          "gpu_ms": 114.98348999023438,
+          "wall_ms": 115.1081999996677,
+          "download_and_merge_seconds": 0.006644400000368478,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 3,
+          "gpu_ms": 113.3821792602539,
+          "wall_ms": 113.46559999947203,
+          "download_and_merge_seconds": 0.006210699999428471,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 4,
+          "gpu_ms": 115.26640319824219,
+          "wall_ms": 115.37739999948826,
+          "download_and_merge_seconds": 0.0065235999991273275,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 5,
+          "gpu_ms": 115.05833435058594,
+          "wall_ms": 115.17479999929492,
+          "download_and_merge_seconds": 0.006773200000679935,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 6,
+          "gpu_ms": 113.1908187866211,
+          "wall_ms": 113.28080000021146,
+          "download_and_merge_seconds": 0.0074748999995790655,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 7,
+          "gpu_ms": 114.85456085205078,
+          "wall_ms": 114.94109999875946,
+          "download_and_merge_seconds": 0.006887800000185962,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 8,
+          "gpu_ms": 115.54249572753906,
+          "wall_ms": 115.69599999893398,
+          "download_and_merge_seconds": 0.008058399998844834,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 9,
+          "gpu_ms": 112.8978271484375,
+          "wall_ms": 112.96330000004673,
+          "download_and_merge_seconds": 0.006158899999718415,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 10,
+          "gpu_ms": 115.29971313476562,
+          "wall_ms": 115.459099999498,
+          "download_and_merge_seconds": 0.00711320000118576,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 11,
+          "gpu_ms": 115.38339233398438,
+          "wall_ms": 115.49080000077083,
+          "download_and_merge_seconds": 0.00611399999979767,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 12,
+          "gpu_ms": 113.432861328125,
+          "wall_ms": 113.49350000091363,
+          "download_and_merge_seconds": 0.006937399999515037,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 13,
+          "gpu_ms": 115.33171081542969,
+          "wall_ms": 115.41480000050797,
+          "download_and_merge_seconds": 0.006401099999493454,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 14,
+          "gpu_ms": 115.75593566894531,
+          "wall_ms": 115.84419999962847,
+          "download_and_merge_seconds": 0.006519100001241895,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 15,
+          "gpu_ms": 113.1646728515625,
+          "wall_ms": 113.25299999953131,
+          "download_and_merge_seconds": 0.006688800000119954,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 16,
+          "gpu_ms": 114.88310241699219,
+          "wall_ms": 114.98340000071039,
+          "download_and_merge_seconds": 0.006477199998698779,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 17,
+          "gpu_ms": 115.21056365966797,
+          "wall_ms": 115.33899999994901,
+          "download_and_merge_seconds": 0.006580799999937881,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 18,
+          "gpu_ms": 112.96742248535156,
+          "wall_ms": 113.02320000140753,
+          "download_and_merge_seconds": 0.007216600000901963,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 19,
+          "gpu_ms": 115.5327377319336,
+          "wall_ms": 115.62589999994088,
+          "download_and_merge_seconds": 0.006316699998933473,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 20,
+          "gpu_ms": 115.08287811279297,
+          "wall_ms": 115.17859999912616,
+          "download_and_merge_seconds": 0.007581400001072325,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 21,
+          "gpu_ms": 113.07389068603516,
+          "wall_ms": 113.14729999867268,
+          "download_and_merge_seconds": 0.0069619000005332055,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 22,
+          "gpu_ms": 115.5244140625,
+          "wall_ms": 115.61130000154662,
+          "download_and_merge_seconds": 0.007229599999845959,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 23,
+          "gpu_ms": 115.23616027832031,
+          "wall_ms": 115.33300000155577,
+          "download_and_merge_seconds": 0.007177299999966635,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 24,
+          "gpu_ms": 113.04217529296875,
+          "wall_ms": 113.11519999981101,
+          "download_and_merge_seconds": 0.006676099999822327,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 25,
+          "gpu_ms": 115.05062103271484,
+          "wall_ms": 115.15499999950407,
+          "download_and_merge_seconds": 0.006267999999181484,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 26,
+          "gpu_ms": 115.48876953125,
+          "wall_ms": 115.68110000007437,
+          "download_and_merge_seconds": 0.007330399999773363,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 27,
+          "gpu_ms": 113.38480377197266,
+          "wall_ms": 113.46420000154467,
+          "download_and_merge_seconds": 0.007662199999685981,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 28,
+          "gpu_ms": 115.2814712524414,
+          "wall_ms": 115.38760000075854,
+          "download_and_merge_seconds": 0.006650000001172884,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 29,
+          "gpu_ms": 115.20252990722656,
+          "wall_ms": 115.32980000083626,
+          "download_and_merge_seconds": 0.006325899999865214,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 30,
+          "gpu_ms": 113.3042221069336,
+          "wall_ms": 113.38210000030813,
+          "download_and_merge_seconds": 0.007747999999992317,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 31,
+          "gpu_ms": 115.4378890991211,
+          "wall_ms": 115.51590000090073,
+          "download_and_merge_seconds": 0.007252600000356324,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 32,
+          "gpu_ms": 115.85529327392578,
+          "wall_ms": 115.95159999887983,
+          "download_and_merge_seconds": 0.00711090000004333,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 33,
+          "gpu_ms": 113.22294616699219,
+          "wall_ms": 113.27979999987292,
+          "download_and_merge_seconds": 0.00648910000018077,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 34,
+          "gpu_ms": 114.83657836914062,
+          "wall_ms": 114.95819999981904,
+          "download_and_merge_seconds": 0.007508300001063617,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 35,
+          "gpu_ms": 114.97974395751953,
+          "wall_ms": 115.13430000013614,
+          "download_and_merge_seconds": 0.006596399998670677,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 36,
+          "gpu_ms": 113.58201599121094,
+          "wall_ms": 113.67090000021562,
+          "download_and_merge_seconds": 0.006488299999546143,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 37,
+          "gpu_ms": 114.96803283691406,
+          "wall_ms": 115.08260000118753,
+          "download_and_merge_seconds": 0.006390500000634347,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 38,
+          "gpu_ms": 115.0948486328125,
+          "wall_ms": 115.20930000006047,
+          "download_and_merge_seconds": 0.0076253000006545335,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 39,
+          "gpu_ms": 113.33203125,
+          "wall_ms": 113.40569999993022,
+          "download_and_merge_seconds": 0.006350399999064393,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 40,
+          "gpu_ms": 115.18508911132812,
+          "wall_ms": 115.30210000091756,
+          "download_and_merge_seconds": 0.00654220000069472,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 41,
+          "gpu_ms": 115.14262390136719,
+          "wall_ms": 115.27050000040617,
+          "download_and_merge_seconds": 0.006432499998481944,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 42,
+          "gpu_ms": 112.6457290649414,
+          "wall_ms": 112.73289999917324,
+          "download_and_merge_seconds": 0.007718499999100459,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 43,
+          "gpu_ms": 115.47440338134766,
+          "wall_ms": 115.60009999993781,
+          "download_and_merge_seconds": 0.007244100001116749,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 44,
+          "gpu_ms": 114.8259506225586,
+          "wall_ms": 114.9492000004102,
+          "download_and_merge_seconds": 0.007269900001119822,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 45,
+          "gpu_ms": 112.9268798828125,
+          "wall_ms": 112.9852000012761,
+          "download_and_merge_seconds": 0.006317800000033458,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 46,
+          "gpu_ms": 114.65990447998047,
+          "wall_ms": 114.7369999998773,
+          "download_and_merge_seconds": 0.0065365999998903135,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 47,
+          "gpu_ms": 115.35469055175781,
+          "wall_ms": 115.47299999983807,
+          "download_and_merge_seconds": 0.006585399998584762,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 48,
+          "gpu_ms": 113.42390441894531,
+          "wall_ms": 113.47729999943112,
+          "download_and_merge_seconds": 0.006415399999241345,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 49,
+          "gpu_ms": 114.74278259277344,
+          "wall_ms": 114.83579999912763,
+          "download_and_merge_seconds": 0.006129400000645546,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 50,
+          "gpu_ms": 115.26985931396484,
+          "wall_ms": 115.37080000016431,
+          "download_and_merge_seconds": 0.006487900000138325,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 51,
+          "gpu_ms": 113.02403259277344,
+          "wall_ms": 113.10650000086753,
+          "download_and_merge_seconds": 0.006421000000045751,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 52,
+          "gpu_ms": 115.187744140625,
+          "wall_ms": 115.25939999955881,
+          "download_and_merge_seconds": 0.0069745000000693835,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 53,
+          "gpu_ms": 114.83385467529297,
+          "wall_ms": 115.03740000080143,
+          "download_and_merge_seconds": 0.006809099999372847,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 54,
+          "gpu_ms": 113.32291412353516,
+          "wall_ms": 113.38910000085889,
+          "download_and_merge_seconds": 0.006930600000487175,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 55,
+          "gpu_ms": 115.38585662841797,
+          "wall_ms": 115.53079999976035,
+          "download_and_merge_seconds": 0.006542400000398629,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 56,
+          "gpu_ms": 115.069091796875,
+          "wall_ms": 115.18459999933839,
+          "download_and_merge_seconds": 0.008728800001335912,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 57,
+          "gpu_ms": 112.88057708740234,
+          "wall_ms": 112.96829999992042,
+          "download_and_merge_seconds": 0.006378699999913806,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 58,
+          "gpu_ms": 114.87638092041016,
+          "wall_ms": 114.98559999927238,
+          "download_and_merge_seconds": 0.007124499999918044,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 67108864
+        }
+      ],
+      "full_pipeline_seconds": 7.871032400018521
+    },
+    "scale": {
+      "prediction_sha256": "2d0483fdb32ac2ebf1668f4f5ff4d679cbd75c05fc75eae8128f5c9683ea35f2",
+      "confusion": [
+        [
+          141171,
+          0,
+          877,
+          13,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          842
+        ],
+        [
+          0,
+          92577,
+          62,
+          0,
+          0,
+          0,
+          60,
+          73,
+          222,
+          0,
+          96,
+          0,
+          90
+        ],
+        [
+          807,
+          273,
+          197245,
+          2734,
+          411,
+          0,
+          1626,
+          1071,
+          0,
+          0,
+          556,
+          25,
+          2476
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          5687,
+          52,
+          2946,
+          0,
+          0,
+          0,
+          0,
+          0,
+          812,
+          0,
+          178
+        ],
+        [
+          99,
+          0,
+          19640,
+          5,
+          47,
+          61187,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          110
+        ],
+        [
+          0,
+          96,
+          1442,
+          0,
+          0,
+          0,
+          25689,
+          0,
+          0,
+          0,
+          0,
+          38,
+          0
+        ],
+        [
+          0,
+          104,
+          261,
+          0,
+          0,
+          0,
+          0,
+          49517,
+          193,
+          0,
+          17,
+          0,
+          322
+        ],
+        [
+          0,
+          1084,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1196,
+          29300,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          236,
+          759,
+          0,
+          0,
+          0,
+          0,
+          78,
+          0,
+          0,
+          166777,
+          1,
+          1606
+        ],
+        [
+          0,
+          0,
+          1400,
+          0,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          787,
+          22347,
+          0
+        ],
+        [
+          1322,
+          316,
+          682,
+          0,
+          0,
+          0,
+          0,
+          3022,
+          0,
+          0,
+          576,
+          0,
+          53880
+        ]
+      ],
+      "mIoU_all_classes": 70.78226429422786,
+      "OA": 93.91307449086153,
+      "raw_point_visit_min": 1,
+      "timings": [
+        {
+          "pass": 0,
+          "gpu_ms": 67.5489273071289,
+          "wall_ms": 67.67070000023523,
+          "download_and_merge_seconds": 0.019789500000115368,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 1,
+          "gpu_ms": 68.62445068359375,
+          "wall_ms": 68.69509999887669,
+          "download_and_merge_seconds": 0.00784890000068117,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088698,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 2,
+          "gpu_ms": 66.70374298095703,
+          "wall_ms": 66.76039999911154,
+          "download_and_merge_seconds": 0.006417800001145224,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087610,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 3,
+          "gpu_ms": 68.58316802978516,
+          "wall_ms": 68.67590000001655,
+          "download_and_merge_seconds": 0.007346599999436876,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 4,
+          "gpu_ms": 69.00240325927734,
+          "wall_ms": 69.07529999989492,
+          "download_and_merge_seconds": 0.006478899998910492,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087738,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 5,
+          "gpu_ms": 67.85424041748047,
+          "wall_ms": 67.98349999917264,
+          "download_and_merge_seconds": 0.007147599999370868,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 6,
+          "gpu_ms": 68.22787475585938,
+          "wall_ms": 68.36670000120648,
+          "download_and_merge_seconds": 0.007022300000244286,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086010,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 7,
+          "gpu_ms": 67.25567626953125,
+          "wall_ms": 67.33490000078746,
+          "download_and_merge_seconds": 0.006469099998867023,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 8,
+          "gpu_ms": 67.03158569335938,
+          "wall_ms": 67.11419999919599,
+          "download_and_merge_seconds": 0.006432500000300934,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085626,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 9,
+          "gpu_ms": 68.3017578125,
+          "wall_ms": 68.43479999952251,
+          "download_and_merge_seconds": 0.006204500001331326,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085946,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 10,
+          "gpu_ms": 68.56326293945312,
+          "wall_ms": 68.64849999874423,
+          "download_and_merge_seconds": 0.007567800001197611,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087802,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 11,
+          "gpu_ms": 69.75186920166016,
+          "wall_ms": 69.84449999981734,
+          "download_and_merge_seconds": 0.0065990000002784654,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086202,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 12,
+          "gpu_ms": 67.31890869140625,
+          "wall_ms": 67.43459999961487,
+          "download_and_merge_seconds": 0.007042400000500493,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087098,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 13,
+          "gpu_ms": 68.27263641357422,
+          "wall_ms": 68.32290000056673,
+          "download_and_merge_seconds": 0.006245299999136478,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087866,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 14,
+          "gpu_ms": 68.23420715332031,
+          "wall_ms": 68.29169999946316,
+          "download_and_merge_seconds": 0.006189400000948808,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 15,
+          "gpu_ms": 67.45203399658203,
+          "wall_ms": 67.5043999999616,
+          "download_and_merge_seconds": 0.007066300000587944,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 16,
+          "gpu_ms": 66.3214111328125,
+          "wall_ms": 66.36940000134928,
+          "download_and_merge_seconds": 0.006354900000587804,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085242,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 17,
+          "gpu_ms": 67.81407928466797,
+          "wall_ms": 67.90729999920586,
+          "download_and_merge_seconds": 0.007049999998343992,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 18,
+          "gpu_ms": 66.85148620605469,
+          "wall_ms": 66.96530000044731,
+          "download_and_merge_seconds": 0.006910500000230968,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 19,
+          "gpu_ms": 66.28995513916016,
+          "wall_ms": 66.334300001472,
+          "download_and_merge_seconds": 0.006862999998702435,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 20,
+          "gpu_ms": 66.5074234008789,
+          "wall_ms": 66.56819999989239,
+          "download_and_merge_seconds": 0.006653899999946589,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 21,
+          "gpu_ms": 68.78848266601562,
+          "wall_ms": 68.85619999957271,
+          "download_and_merge_seconds": 0.006611399998291745,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085498,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 22,
+          "gpu_ms": 68.40585327148438,
+          "wall_ms": 68.44620000083523,
+          "download_and_merge_seconds": 0.006561800000781659,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085562,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 23,
+          "gpu_ms": 68.69830322265625,
+          "wall_ms": 68.80309999905876,
+          "download_and_merge_seconds": 0.006390000000465079,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087610,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 24,
+          "gpu_ms": 67.67417907714844,
+          "wall_ms": 67.74709999990591,
+          "download_and_merge_seconds": 0.007086900001013419,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085946,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 25,
+          "gpu_ms": 67.74034881591797,
+          "wall_ms": 67.81079999927897,
+          "download_and_merge_seconds": 0.006735099999787053,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 26,
+          "gpu_ms": 68.09798431396484,
+          "wall_ms": 68.25909999861324,
+          "download_and_merge_seconds": 0.00727780000124767,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085882,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 27,
+          "gpu_ms": 68.35193634033203,
+          "wall_ms": 68.48230000105104,
+          "download_and_merge_seconds": 0.007336099999520229,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085242,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 28,
+          "gpu_ms": 67.3411865234375,
+          "wall_ms": 67.40170000011858,
+          "download_and_merge_seconds": 0.006990199999563629,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088826,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 29,
+          "gpu_ms": 68.17616271972656,
+          "wall_ms": 68.27239999984158,
+          "download_and_merge_seconds": 0.00730199999998149,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 30,
+          "gpu_ms": 69.55427551269531,
+          "wall_ms": 69.63299999915762,
+          "download_and_merge_seconds": 0.0063742999991518445,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086842,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 31,
+          "gpu_ms": 67.04380798339844,
+          "wall_ms": 67.08889999936218,
+          "download_and_merge_seconds": 0.0063444999996136175,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 32,
+          "gpu_ms": 66.37593841552734,
+          "wall_ms": 66.49189999916416,
+          "download_and_merge_seconds": 0.006458100000600098,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086586,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 33,
+          "gpu_ms": 66.6440658569336,
+          "wall_ms": 66.700999999739,
+          "download_and_merge_seconds": 0.006627499999012798,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 34,
+          "gpu_ms": 67.93315124511719,
+          "wall_ms": 67.98490000073798,
+          "download_and_merge_seconds": 0.007092599998941296,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088186,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 35,
+          "gpu_ms": 67.31417846679688,
+          "wall_ms": 67.41519999923185,
+          "download_and_merge_seconds": 0.006463899999289424,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087290,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 36,
+          "gpu_ms": 67.07411193847656,
+          "wall_ms": 67.19890000022133,
+          "download_and_merge_seconds": 0.006403100000170525,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 37,
+          "gpu_ms": 67.4513931274414,
+          "wall_ms": 67.50610000017332,
+          "download_and_merge_seconds": 0.007310700000743964,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087034,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 38,
+          "gpu_ms": 67.49811553955078,
+          "wall_ms": 67.56289999975706,
+          "download_and_merge_seconds": 0.006326700000499841,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085306,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 39,
+          "gpu_ms": 68.48348999023438,
+          "wall_ms": 68.57459999991988,
+          "download_and_merge_seconds": 0.007409900001221104,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085690,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 40,
+          "gpu_ms": 67.3803482055664,
+          "wall_ms": 67.45649999902525,
+          "download_and_merge_seconds": 0.006447600000683451,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087738,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 41,
+          "gpu_ms": 67.72217559814453,
+          "wall_ms": 67.83629999881668,
+          "download_and_merge_seconds": 0.008728799999516923,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7083578,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 42,
+          "gpu_ms": 68.11478424072266,
+          "wall_ms": 68.26080000064394,
+          "download_and_merge_seconds": 0.007175400000051013,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 43,
+          "gpu_ms": 67.19036865234375,
+          "wall_ms": 67.22850000005565,
+          "download_and_merge_seconds": 0.006151400000817375,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 44,
+          "gpu_ms": 68.85987091064453,
+          "wall_ms": 68.98820000060368,
+          "download_and_merge_seconds": 0.006291500001680106,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087418,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 45,
+          "gpu_ms": 68.14982604980469,
+          "wall_ms": 68.22169999941252,
+          "download_and_merge_seconds": 0.007120700000086799,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086714,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 46,
+          "gpu_ms": 67.75408172607422,
+          "wall_ms": 67.807499999617,
+          "download_and_merge_seconds": 0.006805099999837694,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086138,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 47,
+          "gpu_ms": 66.75939178466797,
+          "wall_ms": 66.8573999992077,
+          "download_and_merge_seconds": 0.006312999999863678,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088314,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 48,
+          "gpu_ms": 67.22473907470703,
+          "wall_ms": 67.33359999998356,
+          "download_and_merge_seconds": 0.006748499999957858,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088378,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 49,
+          "gpu_ms": 66.99929809570312,
+          "wall_ms": 67.05069999952684,
+          "download_and_merge_seconds": 0.006900200000018231,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087162,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 50,
+          "gpu_ms": 66.63148498535156,
+          "wall_ms": 66.72920000164595,
+          "download_and_merge_seconds": 0.006458899999415735,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087418,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 51,
+          "gpu_ms": 68.11286163330078,
+          "wall_ms": 68.16930000059074,
+          "download_and_merge_seconds": 0.007192800001575961,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 52,
+          "gpu_ms": 67.96908569335938,
+          "wall_ms": 68.00449999900593,
+          "download_and_merge_seconds": 0.006356699999741977,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087482,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 53,
+          "gpu_ms": 68.33837127685547,
+          "wall_ms": 68.43120000121417,
+          "download_and_merge_seconds": 0.007767900000544614,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086586,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 54,
+          "gpu_ms": 67.75536346435547,
+          "wall_ms": 67.88220000089495,
+          "download_and_merge_seconds": 0.007889000000432134,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 55,
+          "gpu_ms": 66.700927734375,
+          "wall_ms": 66.76379999953497,
+          "download_and_merge_seconds": 0.006572399999640766,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 56,
+          "gpu_ms": 68.3720932006836,
+          "wall_ms": 68.49359999978333,
+          "download_and_merge_seconds": 0.006311600000117323,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 57,
+          "gpu_ms": 67.20905303955078,
+          "wall_ms": 67.33480000002601,
+          "download_and_merge_seconds": 0.006384399999660673,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086394,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 58,
+          "gpu_ms": 67.21453094482422,
+          "wall_ms": 67.25120000010065,
+          "download_and_merge_seconds": 0.006695600000966806,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086202,
+          "native_pool_reserved_peak_bytes": 67108864
+        }
+      ],
+      "full_pipeline_seconds": 5.106766300013987
+    },
+    "prefix": {
+      "prediction_sha256": "2d0483fdb32ac2ebf1668f4f5ff4d679cbd75c05fc75eae8128f5c9683ea35f2",
+      "confusion": [
+        [
+          141171,
+          0,
+          877,
+          13,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          842
+        ],
+        [
+          0,
+          92577,
+          62,
+          0,
+          0,
+          0,
+          60,
+          73,
+          222,
+          0,
+          96,
+          0,
+          90
+        ],
+        [
+          807,
+          273,
+          197245,
+          2734,
+          411,
+          0,
+          1626,
+          1071,
+          0,
+          0,
+          556,
+          25,
+          2476
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          5687,
+          52,
+          2946,
+          0,
+          0,
+          0,
+          0,
+          0,
+          812,
+          0,
+          178
+        ],
+        [
+          99,
+          0,
+          19640,
+          5,
+          47,
+          61187,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          110
+        ],
+        [
+          0,
+          96,
+          1442,
+          0,
+          0,
+          0,
+          25689,
+          0,
+          0,
+          0,
+          0,
+          38,
+          0
+        ],
+        [
+          0,
+          104,
+          261,
+          0,
+          0,
+          0,
+          0,
+          49517,
+          193,
+          0,
+          17,
+          0,
+          322
+        ],
+        [
+          0,
+          1084,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1196,
+          29300,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          236,
+          759,
+          0,
+          0,
+          0,
+          0,
+          78,
+          0,
+          0,
+          166777,
+          1,
+          1606
+        ],
+        [
+          0,
+          0,
+          1400,
+          0,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          787,
+          22347,
+          0
+        ],
+        [
+          1322,
+          316,
+          682,
+          0,
+          0,
+          0,
+          0,
+          3022,
+          0,
+          0,
+          576,
+          0,
+          53880
+        ]
+      ],
+      "mIoU_all_classes": 70.78226429422786,
+      "OA": 93.91307449086153,
+      "raw_point_visit_min": 1,
+      "timings": [
+        {
+          "pass": 0,
+          "gpu_ms": 66.75481414794922,
+          "wall_ms": 66.86720000107016,
+          "download_and_merge_seconds": 0.019488399999318062,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 1,
+          "gpu_ms": 68.53993225097656,
+          "wall_ms": 68.654400000014,
+          "download_and_merge_seconds": 0.006534000000101514,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088698,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 2,
+          "gpu_ms": 66.81475067138672,
+          "wall_ms": 66.88720000056492,
+          "download_and_merge_seconds": 0.006980000000112341,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087610,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 3,
+          "gpu_ms": 67.51718139648438,
+          "wall_ms": 67.74320000113221,
+          "download_and_merge_seconds": 0.006881599998450838,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 4,
+          "gpu_ms": 66.85478210449219,
+          "wall_ms": 66.95770000078483,
+          "download_and_merge_seconds": 0.006322799999907147,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087738,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 5,
+          "gpu_ms": 66.32025909423828,
+          "wall_ms": 66.39399999949092,
+          "download_and_merge_seconds": 0.007859400000597816,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 6,
+          "gpu_ms": 66.92118072509766,
+          "wall_ms": 67.04480000007607,
+          "download_and_merge_seconds": 0.006901000000652857,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086010,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 7,
+          "gpu_ms": 66.36793518066406,
+          "wall_ms": 66.44369999958144,
+          "download_and_merge_seconds": 0.007430600000589038,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 8,
+          "gpu_ms": 65.82300567626953,
+          "wall_ms": 65.8863000007841,
+          "download_and_merge_seconds": 0.007593099999212427,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085626,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 9,
+          "gpu_ms": 67.66201782226562,
+          "wall_ms": 67.79859999915061,
+          "download_and_merge_seconds": 0.00636329999906593,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085946,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 10,
+          "gpu_ms": 67.22259521484375,
+          "wall_ms": 67.36110000019835,
+          "download_and_merge_seconds": 0.0068269999992480734,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087802,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 11,
+          "gpu_ms": 66.4958724975586,
+          "wall_ms": 66.57079999968118,
+          "download_and_merge_seconds": 0.006296599998677266,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086202,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 12,
+          "gpu_ms": 66.1764144897461,
+          "wall_ms": 66.25439999879745,
+          "download_and_merge_seconds": 0.007008900000073481,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087098,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 13,
+          "gpu_ms": 66.50691223144531,
+          "wall_ms": 66.61189999977069,
+          "download_and_merge_seconds": 0.006364200000462006,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087866,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 14,
+          "gpu_ms": 67.07606506347656,
+          "wall_ms": 67.17260000004899,
+          "download_and_merge_seconds": 0.007056799999190844,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 15,
+          "gpu_ms": 66.73385620117188,
+          "wall_ms": 66.8494000001374,
+          "download_and_merge_seconds": 0.007298200000150246,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 16,
+          "gpu_ms": 66.65270233154297,
+          "wall_ms": 66.8095999990328,
+          "download_and_merge_seconds": 0.006371600000420585,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085242,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 17,
+          "gpu_ms": 66.6352310180664,
+          "wall_ms": 66.68429999990622,
+          "download_and_merge_seconds": 0.007562400000097114,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 18,
+          "gpu_ms": 67.0107192993164,
+          "wall_ms": 67.1318999993673,
+          "download_and_merge_seconds": 0.006630899999436224,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086074,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 19,
+          "gpu_ms": 67.69110107421875,
+          "wall_ms": 67.77279999914754,
+          "download_and_merge_seconds": 0.0060921000003872905,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 20,
+          "gpu_ms": 66.72188568115234,
+          "wall_ms": 66.81510000089474,
+          "download_and_merge_seconds": 0.008099599999695783,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 21,
+          "gpu_ms": 66.06758117675781,
+          "wall_ms": 66.14609999996901,
+          "download_and_merge_seconds": 0.006529399999635643,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085498,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 22,
+          "gpu_ms": 67.55343627929688,
+          "wall_ms": 67.6841999993485,
+          "download_and_merge_seconds": 0.008580500001698965,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085562,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 23,
+          "gpu_ms": 65.66162872314453,
+          "wall_ms": 65.72009999945294,
+          "download_and_merge_seconds": 0.006595299999389681,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087610,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 24,
+          "gpu_ms": 66.9504623413086,
+          "wall_ms": 67.00810000074853,
+          "download_and_merge_seconds": 0.006210300000020652,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085946,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 25,
+          "gpu_ms": 66.75615692138672,
+          "wall_ms": 66.85420000030717,
+          "download_and_merge_seconds": 0.006900999998833868,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 26,
+          "gpu_ms": 66.24921417236328,
+          "wall_ms": 66.28880000062054,
+          "download_and_merge_seconds": 0.006410600000890554,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085882,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 27,
+          "gpu_ms": 66.90518188476562,
+          "wall_ms": 67.00629999977536,
+          "download_and_merge_seconds": 0.006803899999795249,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085242,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 28,
+          "gpu_ms": 67.14019012451172,
+          "wall_ms": 67.25000000005821,
+          "download_and_merge_seconds": 0.006430200000977493,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088826,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 29,
+          "gpu_ms": 65.84681701660156,
+          "wall_ms": 65.88809999993828,
+          "download_and_merge_seconds": 0.006207000000358676,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 30,
+          "gpu_ms": 66.8199691772461,
+          "wall_ms": 66.9318000000203,
+          "download_and_merge_seconds": 0.006167999999888707,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086842,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 31,
+          "gpu_ms": 67.65503692626953,
+          "wall_ms": 67.73559999965073,
+          "download_and_merge_seconds": 0.006923300001290045,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 32,
+          "gpu_ms": 67.30754852294922,
+          "wall_ms": 67.3676999995223,
+          "download_and_merge_seconds": 0.006727800000589923,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086586,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 33,
+          "gpu_ms": 67.00361633300781,
+          "wall_ms": 67.07839999944554,
+          "download_and_merge_seconds": 0.00722700000005716,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 34,
+          "gpu_ms": 66.36457824707031,
+          "wall_ms": 66.4546000007249,
+          "download_and_merge_seconds": 0.006863000000521424,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088186,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 35,
+          "gpu_ms": 67.17286682128906,
+          "wall_ms": 67.23410000086005,
+          "download_and_merge_seconds": 0.0066295999986323295,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087290,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 36,
+          "gpu_ms": 67.89574432373047,
+          "wall_ms": 67.95659999988857,
+          "download_and_merge_seconds": 0.006845400001111557,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086458,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 37,
+          "gpu_ms": 67.05757141113281,
+          "wall_ms": 67.1464000006381,
+          "download_and_merge_seconds": 0.006583899999895948,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087034,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 38,
+          "gpu_ms": 67.16009521484375,
+          "wall_ms": 67.22120000085852,
+          "download_and_merge_seconds": 0.006483900000603171,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085306,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 39,
+          "gpu_ms": 67.14486694335938,
+          "wall_ms": 67.31300000137708,
+          "download_and_merge_seconds": 0.007015400000454974,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7085690,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 40,
+          "gpu_ms": 66.13922882080078,
+          "wall_ms": 66.26260000120965,
+          "download_and_merge_seconds": 0.0064753999995446065,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087738,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 41,
+          "gpu_ms": 67.98204803466797,
+          "wall_ms": 68.04129999909492,
+          "download_and_merge_seconds": 0.007551799999419018,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7083578,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 42,
+          "gpu_ms": 67.30470275878906,
+          "wall_ms": 67.43490000008023,
+          "download_and_merge_seconds": 0.00689079999938258,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 43,
+          "gpu_ms": 66.67017364501953,
+          "wall_ms": 66.79679999979271,
+          "download_and_merge_seconds": 0.007080600000335835,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086906,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 44,
+          "gpu_ms": 66.63442993164062,
+          "wall_ms": 66.70760000088194,
+          "download_and_merge_seconds": 0.0065300999995088205,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087418,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 45,
+          "gpu_ms": 67.48841857910156,
+          "wall_ms": 67.64689999909024,
+          "download_and_merge_seconds": 0.00655670000014652,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086714,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 46,
+          "gpu_ms": 65.93276977539062,
+          "wall_ms": 66.03910000012547,
+          "download_and_merge_seconds": 0.006542900000567897,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086138,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 47,
+          "gpu_ms": 67.2754898071289,
+          "wall_ms": 67.33130000066012,
+          "download_and_merge_seconds": 0.006428899998354609,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088314,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 48,
+          "gpu_ms": 67.47811126708984,
+          "wall_ms": 67.55540000085603,
+          "download_and_merge_seconds": 0.006960400000025402,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7088378,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 49,
+          "gpu_ms": 67.73948669433594,
+          "wall_ms": 67.8278000013961,
+          "download_and_merge_seconds": 0.006943200000023353,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087162,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 50,
+          "gpu_ms": 66.48595428466797,
+          "wall_ms": 66.53720000031171,
+          "download_and_merge_seconds": 0.006147799998871051,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087418,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 51,
+          "gpu_ms": 66.6428451538086,
+          "wall_ms": 66.73140000020794,
+          "download_and_merge_seconds": 0.006567899999936344,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 52,
+          "gpu_ms": 68.0869140625,
+          "wall_ms": 68.19780000114406,
+          "download_and_merge_seconds": 0.006442199999582954,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087482,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 53,
+          "gpu_ms": 67.14889526367188,
+          "wall_ms": 67.21900000047754,
+          "download_and_merge_seconds": 0.00802769999972952,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086586,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 54,
+          "gpu_ms": 66.53948974609375,
+          "wall_ms": 66.63560000015423,
+          "download_and_merge_seconds": 0.006575199999133474,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7087546,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 55,
+          "gpu_ms": 65.97392272949219,
+          "wall_ms": 66.08929999856628,
+          "download_and_merge_seconds": 0.006926099998963764,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086970,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 56,
+          "gpu_ms": 66.34297943115234,
+          "wall_ms": 66.41700000000128,
+          "download_and_merge_seconds": 0.007378099999186816,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 57,
+          "gpu_ms": 66.44563293457031,
+          "wall_ms": 66.55949999912991,
+          "download_and_merge_seconds": 0.006013499998516636,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086394,
+          "native_pool_reserved_peak_bytes": 67108864
+        },
+        {
+          "pass": 58,
+          "gpu_ms": 66.57049560546875,
+          "wall_ms": 66.66600000062317,
+          "download_and_merge_seconds": 0.007081699999616831,
+          "peak_torch_allocated_bytes": 351714816,
+          "native_pool_used_peak_bytes": 7086202,
+          "native_pool_reserved_peak_bytes": 67108864
+        }
+      ],
+      "full_pipeline_seconds": 5.057923900012611
+    }
+  },
+  "cloud_preparation_seconds": 0.17811299999993935,
+  "sum_pass_preparation_seconds": 0.48345950000657467,
+  "sum_upload_seconds": 0.02943960000811785,
+  "all_methods_scene_wall_seconds": 18.253839099999823
+}

@@ -1,0 +1,1389 @@
+{
+  "status": "PASS",
+  "dataset": "scannet",
+  "size": "median",
+  "scene": "scene0697_01_inst_nostuff",
+  "model": "pointvector",
+  "block": 0,
+  "voxel_n": 100801,
+  "input_indices_sha256": "f386e3b8d15cd68bda276f71b9865b6510c4a3ce1576eb4aa8acf16fe1343090",
+  "all_logits_bitexact_to_original": true,
+  "warmup_drift": {
+    "flash": {
+      "median_last5_over_previous5": 1.114614606923783,
+      "last10_ms": [
+        488.86579999816604,
+        494.36019999848213,
+        507.8326000002562,
+        489.5211000002746,
+        533.4939999993367,
+        547.0669999995152,
+        545.3472999979567,
+        590.6957000006514,
+        573.0624000025273,
+        551.0211000000709
+      ]
+    },
+    "frozen": {
+      "median_last5_over_previous5": 1.0665678987442264,
+      "last10_ms": [
+        203.08619999923394,
+        199.95060000292142,
+        199.1200000011304,
+        192.08599999910803,
+        198.38479999816627,
+        211.38710000013816,
+        212.374999999156,
+        230.1246999995783,
+        219.91280000293045,
+        210.1098000021011
+      ]
+    },
+    "session": {
+      "median_last5_over_previous5": 1.0910518763534027,
+      "last10_ms": [
+        202.9127999994671,
+        207.81340000030468,
+        212.0613000006415,
+        199.63170000119135,
+        215.70300000166753,
+        211.50399999896763,
+        229.47329999806243,
+        246.0611999995308,
+        226.73520000171266,
+        219.81120000054943
+      ]
+    }
+  },
+  "measurements": [
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 504.0214999971795,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 288.0394999992859,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 660.4286000001593,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 247.8512999987288,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 608.0910000018775,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 231.53020000245306,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 553.7360000016633,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 214.70059999774094,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 223.231100000703,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 216.3942999977735,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 231.24730000199634,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 560.5158999969717,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 222.7536999998847,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 544.8742999979004,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 209.12200000020675,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 515.4824999990524,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 198.8500000006752,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 217.12249999836786,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 217.3553000029642,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 237.847000000329,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 569.4673999969382,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 222.51689999757218,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 547.7436999972269,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 215.15820000058739,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 502.85230000008596,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 201.52649999727146,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 212.5564999987546,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 208.86499999687658,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 221.3558000003104,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 515.7045000014477,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 212.1335999981966,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 495.0371999984782,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 198.05930000075023,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 460.7486999993853,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 188.61330000072485,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 194.54749999931664,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 198.94249999924796,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 200.83750000048894,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 471.4848000003258,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 199.66570000178763,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 458.98760000272887,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 185.34449999788194,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 440.6609000034223,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 182.49040000227978,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 192.82790000215755,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 196.98130000324454,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 214.38140000100248,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 507.8127000015229,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 206.44049999827985,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 497.28010000035283,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 194.92610000088462,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 473.0358000015258,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 189.83099999968545,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 196.87649999832502,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 200.28499999898486,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 214.86189999995986,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 531.1542999988887,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 216.7477000002691,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 514.1284999990603,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 199.85470000028727,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 488.86579999816604,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 203.08619999923394,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 202.9127999994671,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 199.95060000292142,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 207.81340000030468,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 494.36019999848213,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 212.0613000006415,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 507.8326000002562,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 199.1200000011304,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 489.5211000002746,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 192.08599999910803,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 199.63170000119135,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 198.38479999816627,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 215.70300000166753,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 533.4939999993367,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 211.50399999896763,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 547.0669999995152,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 211.38710000013816,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 545.3472999979567,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 212.374999999156,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 229.47329999806243,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 230.1246999995783,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 246.0611999995308,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 590.6957000006514,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 226.73520000171266,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 573.0624000025273,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 219.91280000293045,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 551.0211000000709,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 210.1098000021011,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 219.81120000054943,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 220.73470000032103,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 238.19670000011683,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 572.9344999999739,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 234.94829999981448,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 552.7125999979035,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 219.85900000072434,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 527.9805000027409,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 210.33660000102827,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 216.853900001297,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 208.07280000008177,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 217.1453000009933,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 530.9030000025814,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 209.71020000069984,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 513.9099999978498,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 206.66930000152206,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 518.6035000006086,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 204.7400999981619,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 223.23929999765824,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 230.9529999984079,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 231.87900000266382,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 578.9021999989927,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    }
+  ],
+  "profiles": [
+    {
+      "method": "frozen",
+      "cycle": 0,
+      "whole_wall_ms": 218.96469999774126,
+      "whole_gpu_ms": 218.86181640625,
+      "inclusive_ms": {
+        "build": 3.9854079484939575,
+        "radius_kernel": 4.34060800075531,
+        "free": 0.0071680000983178616,
+        "radius_path": 8.602624133229256,
+        "cache_hit_path": 0.08499200083315372,
+        "nn_path": 2.3142400085926056,
+        "nn_kernel": 2.0183039903640747
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "exclusive_ms": {
+        "build": 3.9854049682617188,
+        "radius_kernel": 4.340614318847656,
+        "free": 0.0071563720703125,
+        "nn_kernel": 2.0182952880859375,
+        "radius_path_exclusive": 0.27353668212890625,
+        "cache_hit_path_exclusive": 0.084991455078125,
+        "nn_path_exclusive": 0.295928955078125,
+        "neural_sampling_and_remaining": 207.85588836669922
+      },
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "cycle": 0,
+      "whole_wall_ms": 235.98540000239154,
+      "whole_gpu_ms": 235.88771057128906,
+      "inclusive_ms": {
+        "build": 6.006784081459045,
+        "radius_kernel": 4.757568001747131,
+        "radius_path": 12.404736399650574,
+        "cache_hit_path": 2.8529920130968094,
+        "nn_path": 2.8456959426403046,
+        "nn_kernel": 2.1508800387382507,
+        "free": 0.006144000217318535
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "exclusive_ms": {
+        "build": 6.00677490234375,
+        "radius_kernel": 4.7575836181640625,
+        "nn_kernel": 2.15087890625,
+        "free": 0.0061492919921875,
+        "radius_path_exclusive": 1.640380859375,
+        "cache_hit_path_exclusive": 2.8530120849609375,
+        "nn_path_exclusive": 0.69482421875,
+        "neural_sampling_and_remaining": 217.77810668945312
+      },
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "cycle": 0,
+      "whole_wall_ms": 574.3752999987919,
+      "whole_gpu_ms": 574.3267211914062,
+      "inclusive_ms": {
+        "radius_path": 72.71116743981838,
+        "nn_path": 278.47373339533806
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "exclusive_ms": {
+        "radius_path_exclusive": 72.71114349365234,
+        "nn_path_exclusive": 278.4737548828125,
+        "neural_sampling_and_remaining": 223.1418228149414
+      },
+      "counters": {},
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "cycle": 1,
+      "whole_wall_ms": 234.54789999959758,
+      "whole_gpu_ms": 234.40765380859375,
+      "inclusive_ms": {
+        "build": 4.772735834121704,
+        "radius_kernel": 4.717855989933014,
+        "radius_path": 10.440703868865967,
+        "cache_hit_path": 2.2385600209236145,
+        "nn_path": 2.870272010564804,
+        "nn_kernel": 2.157760053873062,
+        "free": 0.0071680000983178616
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "exclusive_ms": {
+        "build": 4.772735595703125,
+        "radius_kernel": 4.717857360839844,
+        "nn_kernel": 2.157745361328125,
+        "free": 0.007171630859375,
+        "radius_path_exclusive": 0.950103759765625,
+        "cache_hit_path_exclusive": 2.238555908203125,
+        "nn_path_exclusive": 0.7125244140625,
+        "neural_sampling_and_remaining": 218.85095977783203
+      },
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "cycle": 1,
+      "whole_wall_ms": 557.3416000006546,
+      "whole_gpu_ms": 557.2271728515625,
+      "inclusive_ms": {
+        "radius_path": 70.1317110657692,
+        "nn_path": 268.7334468662739
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "exclusive_ms": {
+        "radius_path_exclusive": 70.13167572021484,
+        "nn_path_exclusive": 268.7334289550781,
+        "neural_sampling_and_remaining": 218.36206817626953
+      },
+      "counters": {},
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "cycle": 1,
+      "whole_wall_ms": 214.85670000038226,
+      "whole_gpu_ms": 214.63519287109375,
+      "inclusive_ms": {
+        "build": 5.005311965942383,
+        "radius_kernel": 4.267008006572723,
+        "free": 0.0051200001034885645,
+        "radius_path": 9.659392111003399,
+        "cache_hit_path": 0.07987200049683452,
+        "nn_path": 2.1954559832811356,
+        "nn_kernel": 1.936384066939354
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "exclusive_ms": {
+        "build": 5.005302429199219,
+        "radius_kernel": 4.266990661621094,
+        "free": 0.00511932373046875,
+        "nn_kernel": 1.9364013671875,
+        "radius_path_exclusive": 0.384033203125,
+        "cache_hit_path_exclusive": 0.0798492431640625,
+        "nn_path_exclusive": 0.2590484619140625,
+        "neural_sampling_and_remaining": 202.69844818115234
+      },
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "cycle": 2,
+      "whole_wall_ms": 523.5414999988279,
+      "whole_gpu_ms": 523.361328125,
+      "inclusive_ms": {
+        "radius_path": 65.36703857779503,
+        "nn_path": 251.95315985381603
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "exclusive_ms": {
+        "radius_path_exclusive": 65.36708068847656,
+        "nn_path_exclusive": 251.95315551757812,
+        "neural_sampling_and_remaining": 206.0410919189453
+      },
+      "counters": {},
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "cycle": 2,
+      "whole_wall_ms": 210.24799999941024,
+      "whole_gpu_ms": 210.16259765625,
+      "inclusive_ms": {
+        "build": 5.43011212348938,
+        "radius_kernel": 4.149248003959656,
+        "free": 0.0051200001034885645,
+        "radius_path": 10.00447977334261,
+        "cache_hit_path": 0.08089600037783384,
+        "nn_path": 2.149376019835472,
+        "nn_kernel": 1.8933759927749634
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "exclusive_ms": {
+        "build": 5.43011474609375,
+        "radius_kernel": 4.14923095703125,
+        "free": 0.00511932373046875,
+        "nn_kernel": 1.89337158203125,
+        "radius_path_exclusive": 0.42205810546875,
+        "cache_hit_path_exclusive": 0.08090972900390625,
+        "nn_path_exclusive": 0.256011962890625,
+        "neural_sampling_and_remaining": 197.92578125
+      },
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "cycle": 2,
+      "whole_wall_ms": 222.44509999654838,
+      "whole_gpu_ms": 222.36985778808594,
+      "inclusive_ms": {
+        "build": 3.8553600311279297,
+        "radius_kernel": 4.4530240297317505,
+        "radius_path": 9.662464082241058,
+        "cache_hit_path": 2.9298240542411804,
+        "nn_path": 3.028991997241974,
+        "nn_kernel": 2.069791942834854,
+        "free": 0.006144000217318535
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "exclusive_ms": {
+        "build": 3.8553619384765625,
+        "radius_kernel": 4.453025817871094,
+        "nn_kernel": 2.069793701171875,
+        "free": 0.0061492919921875,
+        "radius_path_exclusive": 1.35406494140625,
+        "cache_hit_path_exclusive": 2.9298248291015625,
+        "nn_path_exclusive": 0.9591827392578125,
+        "neural_sampling_and_remaining": 206.7424545288086
+      },
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "cycle": 3,
+      "whole_wall_ms": 218.24969999943278,
+      "whole_gpu_ms": 218.1416015625,
+      "inclusive_ms": {
+        "build": 4.582399964332581,
+        "radius_kernel": 4.274176120758057,
+        "free": 0.0051200001034885645,
+        "radius_path": 9.095168024301529,
+        "cache_hit_path": 0.07884800108149648,
+        "nn_path": 2.201600059866905,
+        "nn_kernel": 1.942528024315834
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "exclusive_ms": {
+        "build": 4.582405090332031,
+        "radius_kernel": 4.2741851806640625,
+        "free": 0.005126953125,
+        "nn_kernel": 1.9425201416015625,
+        "radius_path_exclusive": 0.23654937744140625,
+        "cache_hit_path_exclusive": 0.078857421875,
+        "nn_path_exclusive": 0.25909423828125,
+        "neural_sampling_and_remaining": 206.7628631591797
+      },
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "cycle": 3,
+      "whole_wall_ms": 224.0611999986868,
+      "whole_gpu_ms": 223.9773406982422,
+      "inclusive_ms": {
+        "build": 4.7820799350738525,
+        "radius_kernel": 4.4366079568862915,
+        "radius_path": 10.663936257362366,
+        "cache_hit_path": 2.6985600292682648,
+        "nn_path": 2.826240062713623,
+        "nn_kernel": 2.1323839724063873,
+        "free": 0.006144000217318535
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "exclusive_ms": {
+        "build": 4.782081604003906,
+        "radius_kernel": 4.4365997314453125,
+        "nn_kernel": 2.13238525390625,
+        "free": 0.006134033203125,
+        "radius_path_exclusive": 1.4452590942382812,
+        "cache_hit_path_exclusive": 2.69854736328125,
+        "nn_path_exclusive": 0.6938629150390625,
+        "neural_sampling_and_remaining": 207.782470703125
+      },
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "cycle": 3,
+      "whole_wall_ms": 559.2587999999523,
+      "whole_gpu_ms": 559.1505737304688,
+      "inclusive_ms": {
+        "radius_path": 69.13843043148518,
+        "nn_path": 272.60928043723106
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "exclusive_ms": {
+        "radius_path_exclusive": 69.13842010498047,
+        "nn_path_exclusive": 272.6092834472656,
+        "neural_sampling_and_remaining": 217.40287017822266
+      },
+      "counters": {},
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "cycle": 4,
+      "whole_wall_ms": 223.90360000281362,
+      "whole_gpu_ms": 223.62066650390625,
+      "inclusive_ms": {
+        "build": 4.622208118438721,
+        "radius_kernel": 4.407136023044586,
+        "radius_path": 10.818560227751732,
+        "cache_hit_path": 2.77196803689003,
+        "nn_path": 3.8522879779338837,
+        "nn_kernel": 2.3262080252170563,
+        "free": 0.006144000217318535
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "exclusive_ms": {
+        "build": 4.6222076416015625,
+        "radius_kernel": 4.407127380371094,
+        "nn_kernel": 2.3262176513671875,
+        "free": 0.0061492919921875,
+        "radius_path_exclusive": 1.789215087890625,
+        "cache_hit_path_exclusive": 2.77197265625,
+        "nn_path_exclusive": 1.5260772705078125,
+        "neural_sampling_and_remaining": 206.17169952392578
+      },
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "cycle": 4,
+      "whole_wall_ms": 573.3742999982496,
+      "whole_gpu_ms": 573.2683715820312,
+      "inclusive_ms": {
+        "radius_path": 71.8510094806552,
+        "nn_path": 280.2810809612274
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "exclusive_ms": {
+        "radius_path_exclusive": 71.85098266601562,
+        "nn_path_exclusive": 280.28106689453125,
+        "neural_sampling_and_remaining": 221.13632202148438
+      },
+      "counters": {},
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "cycle": 4,
+      "whole_wall_ms": 222.59409999969648,
+      "whole_gpu_ms": 222.4674530029297,
+      "inclusive_ms": {
+        "build": 5.01964807510376,
+        "radius_kernel": 4.415488004684448,
+        "free": 0.006144000217318535,
+        "radius_path": 9.793535992503166,
+        "cache_hit_path": 0.08601599978283048,
+        "nn_path": 2.352128028869629,
+        "nn_kernel": 2.0725759863853455
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "exclusive_ms": {
+        "build": 5.019645690917969,
+        "radius_kernel": 4.415489196777344,
+        "free": 0.00614166259765625,
+        "nn_kernel": 2.07257080078125,
+        "radius_path_exclusive": 0.355316162109375,
+        "cache_hit_path_exclusive": 0.08599853515625,
+        "nn_path_exclusive": 0.2795562744140625,
+        "neural_sampling_and_remaining": 210.23273468017578
+      },
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      },
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    }
+  ]
+}

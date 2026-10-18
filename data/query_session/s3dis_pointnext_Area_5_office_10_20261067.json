@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "dataset": "s3dis",
+  "model": "pointnext",
+  "scene": "Area_5_office_10",
+  "seed": 20261067,
+  "voxel_n": 52596,
+  "input_sha256": "1e6b2139943ba9178307e35d8a7beb82d5c38061b1f199928128a94ef66a1c74",
+  "source_data_sha256": "e40f26d4d15e4d3cb377c4967b5e4c556daca517a62b639fd9e29c40747c4445",
+  "reference_logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05",
+  "all_logits_bitexact": true,
+  "methods": {
+    "flash": [
+      {
+        "repeat": 0,
+        "wall_ms": 93.55760000107693,
+        "gpu_ms": 93.49842834472656,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 93.8717999997607,
+        "gpu_ms": 93.79891204833984,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 94.10399999978836,
+        "gpu_ms": 94.04255676269531,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 94.17370000301162,
+        "gpu_ms": 94.06626892089844,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 94.06429999944521,
+        "gpu_ms": 93.99385833740234,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      }
+    ],
+    "frozen": [
+      {
+        "repeat": 0,
+        "wall_ms": 55.45960000017658,
+        "gpu_ms": 55.391902923583984,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 55.61010000019451,
+        "gpu_ms": 55.50966262817383,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 57.00680000154534,
+        "gpu_ms": 56.93584060668945,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 56.57910000081756,
+        "gpu_ms": 56.52489471435547,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 55.12139999700594,
+        "gpu_ms": 55.04972839355469,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      }
+    ],
+    "session": [
+      {
+        "repeat": 0,
+        "wall_ms": 57.880099997419165,
+        "gpu_ms": 57.84342575073242,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 58.46940000265022,
+        "gpu_ms": 58.40089416503906,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 60.004599999956554,
+        "gpu_ms": 59.96995162963867,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 60.103700001491234,
+        "gpu_ms": 60.066017150878906,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 58.37520000204677,
+        "gpu_ms": 58.337791442871094,
+        "logits_sha256": "feb248d2c1bfd770a6f49ffb0179142bc44244849e02046dbb9904e296b0ea05"
+      }
+    ]
+  },
+  "counters": {
+    "flash": {},
+    "frozen": {
+      "builds": 2,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "cache_bytes": 2235136,
+      "fallbacks": 0
+    },
+    "session": {
+      "builds": 2,
+      "tree_reuses": 3,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "coordinate_comparisons": 25,
+      "snapshot_bytes": 1168584,
+      "cache_bytes": 3918208,
+      "fallbacks": 0
+    }
+  }
+}

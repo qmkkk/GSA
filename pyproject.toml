@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsa-point-queries"
+version = "0.1.0"
+description = "Geometry-state reuse for exact GPU queries in hierarchical point-cloud networks"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["torch>=2.0", "numpy>=1.24"]
+authors = [
+  {name = "Tianyu He"}, {name = "Qixuan Yan"},
+  {name = "Yunhao Ma"}, {name = "Rundong Zhang"}
+]
+
+[project.urls]
+Repository = "https://github.com/qmkkk/GSA"
+
+[tool.setuptools]
+packages = ["gsa"]
+
+[tool.setuptools.package-data]
+gsa = ["_native/*.dll", "_native/*.so"]

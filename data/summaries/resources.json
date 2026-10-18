@@ -1,0 +1,5119 @@
+{
+  "status": "PASS",
+  "processes": 144,
+  "first_resource_processes": 108,
+  "warmed_processes": 36,
+  "first_forwards": 108,
+  "startup_transition_forwards": 756,
+  "warmup_forwards": 3240,
+  "warm_forwards": 756,
+  "profile_forwards": 180,
+  "startup_profile_forwards": 180,
+  "total_full_forward_output_checks": 5220,
+  "all_full_logits_match_original": true,
+  "latency_aggregation": "3 independent process blocks; median of first measurements in per-method fresh processes. Warm cohort: 30 warm-up cycles per method, then 7 timed rotating cycles per process; median per process then median over 3 processes. All 7 original post-first calls retained separately as startup transition. No timing rows dropped.",
+  "memory_definition": "For every first/warm forward: reset PyTorch and native private-pool high-water marks; record each peak allocated/used and reserved. Sum of allocated+native-used peaks is a conservative upper bound, not simultaneous peak or total device residency. CUDA context/library memory is outside allocator totals. Fresh processes remove cross-method allocator history.",
+  "profiling_definition": "Primary profile: mean of 5 event-instrumented forwards in warm block 0 after 30 warm-up and 7 timed cycles per method. Exclusive components sum to whole event duration. Query path includes small-support brute-force fallback, allocations/copies, and QuerySession value checks. GPU event intervals include stream idle time caused by host submission. Observed profile/pre-warm ratio includes instrumentation plus within-run variation. Original startup profiles remain in their raw records.",
+  "cohort_scope": "Six size-selected scenes, twelve scene-model cases, first voxel pass; original full-760 scene matrix remains the population-scale result.",
+  "aggregate": [
+    {
+      "method": "frozen",
+      "case_model_pairs": 12,
+      "first_speedup_geomean": 1.5686964161871,
+      "warm_speedup_geomean": 1.8333168022538953,
+      "first_speedup_range": [
+        0.927308192518309,
+        2.4386286165958544
+      ],
+      "warm_speedup_range": [
+        0.813111870628094,
+        2.9732450752851554
+      ],
+      "peak_used_upper_bound_delta_MiB_range": [
+        1.4488372802734375,
+        41.26234436035156
+      ],
+      "peak_used_upper_bound_delta_percent_range": [
+        1.6731380347505098,
+        2.2187152446235148
+      ],
+      "peak_reserved_upper_bound_delta_MiB_range": [
+        32.0,
+        86.0
+      ]
+    },
+    {
+      "method": "session",
+      "case_model_pairs": 12,
+      "first_speedup_geomean": 1.4749431384435623,
+      "warm_speedup_geomean": 1.6731930260112353,
+      "first_speedup_range": [
+        0.864323434667186,
+        2.429781383537427
+      ],
+      "warm_speedup_range": [
+        0.7239513886163286,
+        2.9351923190245914
+      ],
+      "peak_used_upper_bound_delta_MiB_range": [
+        2.0377044677734375,
+        57.04945373535156
+      ],
+      "peak_used_upper_bound_delta_percent_range": [
+        2.273807604653433,
+        3.041591787398068
+      ],
+      "peak_reserved_upper_bound_delta_MiB_range": [
+        34.0,
+        88.0
+      ]
+    }
+  ],
+  "resource_rows": [
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 13114,
+      "first_ms_median": 234.65710000164108,
+      "first_ms_range": [
+        233.53680000218446,
+        580.3183000025456
+      ],
+      "first_ms_blocks": [
+        580.3183000025456,
+        233.53680000218446,
+        234.65710000164108
+      ],
+      "warm_ms_median_of_block_medians": 15.474399999220623,
+      "warm_ms_block_median_range": [
+        14.873699998133816,
+        41.18690000177594
+      ],
+      "warm_ms_block_medians": [
+        41.18690000177594,
+        15.474399999220623,
+        14.873699998133816
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 115923968,
+          "torch_peak_reserved_bytes": 159383552,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 115923968,
+          "reserved_peak_upper_bound_bytes": 159383552
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 115923968,
+          "torch_peak_reserved_bytes": 159383552,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 115923968,
+          "reserved_peak_upper_bound_bytes": 159383552
+        }
+      },
+      "peak_used_upper_bound_MiB": 110.5537109375,
+      "peak_reserved_upper_bound_MiB": 152.0,
+      "torch_peak_allocated_MiB": 110.5537109375,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 41.05840000192984,
+      "startup_transition_ms_block_medians": [
+        19.23959999840008,
+        41.05840000192984,
+        41.25909999856958
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0008454790695784,
+        0.9991285969649876,
+        1.001327904688359
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 13114,
+      "first_ms_median": 253.0518999992637,
+      "first_ms_range": [
+        235.85149999780697,
+        321.60799999837764
+      ],
+      "first_ms_blocks": [
+        321.60799999837764,
+        253.0518999992637,
+        235.85149999780697
+      ],
+      "warm_ms_median_of_block_medians": 14.293400003225543,
+      "warm_ms_block_median_range": [
+        12.09519999974873,
+        30.820700001640944
+      ],
+      "warm_ms_block_medians": [
+        30.820700001640944,
+        14.293400003225543,
+        12.09519999974873
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 116344320,
+          "torch_peak_reserved_bytes": 159383552,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 117863536,
+          "reserved_peak_upper_bound_bytes": 192937984
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 116344320,
+          "torch_peak_reserved_bytes": 159383552,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 117863536,
+          "reserved_peak_upper_bound_bytes": 192937984
+        }
+      },
+      "peak_used_upper_bound_MiB": 112.40342712402344,
+      "peak_reserved_upper_bound_MiB": 184.0,
+      "torch_peak_allocated_MiB": 110.95458984375,
+      "native_used_peak_MiB": 1.4488372802734375,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 30.353500002092915,
+      "startup_transition_ms_block_medians": [
+        16.085499999462627,
+        30.353500002092915,
+        30.45170000041253
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0222803896048502,
+        1.0043757990539606,
+        0.9904696459428922
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 13114,
+      "first_ms_median": 257.90410000263364,
+      "first_ms_range": [
+        251.6280000018014,
+        340.1248999980453
+      ],
+      "first_ms_blocks": [
+        340.1248999980453,
+        251.6280000018014,
+        257.90410000263364
+      ],
+      "warm_ms_median_of_block_medians": 20.32649999819114,
+      "warm_ms_block_median_range": [
+        15.846599999349564,
+        34.026599998469464
+      ],
+      "warm_ms_block_medians": [
+        34.026599998469464,
+        20.32649999819114,
+        15.846599999349564
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 117040640,
+          "torch_peak_reserved_bytes": 161480704,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 118559856,
+          "reserved_peak_upper_bound_bytes": 195035136
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 117040640,
+          "torch_peak_reserved_bytes": 161480704,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 118559856,
+          "reserved_peak_upper_bound_bytes": 195035136
+        }
+      },
+      "peak_used_upper_bound_MiB": 113.06748962402344,
+      "peak_reserved_upper_bound_MiB": 186.0,
+      "torch_peak_allocated_MiB": 111.61865234375,
+      "native_used_peak_MiB": 1.4488372802734375,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 33.13260000140872,
+      "startup_transition_ms_block_medians": [
+        18.24539999870467,
+        33.13260000140872,
+        33.18769999896176
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0289059522795743,
+        1.0947308429495535,
+        1.349198464053351
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 13114,
+      "first_ms_median": 235.2800999979081,
+      "first_ms_range": [
+        234.92699999769684,
+        243.3579999997164
+      ],
+      "first_ms_blocks": [
+        243.3579999997164,
+        234.92699999769684,
+        235.2800999979081
+      ],
+      "warm_ms_median_of_block_medians": 16.17930000065826,
+      "warm_ms_block_median_range": [
+        15.536200000497047,
+        37.73580000051879
+      ],
+      "warm_ms_block_medians": [
+        37.73580000051879,
+        16.17930000065826,
+        15.536200000497047
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 89663488,
+          "torch_peak_reserved_bytes": 121634816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 89663488,
+          "reserved_peak_upper_bound_bytes": 121634816
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 89663488,
+          "torch_peak_reserved_bytes": 148897792,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 89663488,
+          "reserved_peak_upper_bound_bytes": 148897792
+        }
+      },
+      "peak_used_upper_bound_MiB": 85.509765625,
+      "peak_reserved_upper_bound_MiB": 142.0,
+      "torch_peak_allocated_MiB": 85.509765625,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 37.759500002721325,
+      "startup_transition_ms_block_medians": [
+        17.687799998384435,
+        37.759500002721325,
+        38.110200002847705
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0028614920975982,
+        0.8054307337901923,
+        1.006721250650604
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 13114,
+      "first_ms_median": 244.73560000114958,
+      "first_ms_range": [
+        238.93800000223564,
+        315.29719999889494
+      ],
+      "first_ms_blocks": [
+        315.29719999889494,
+        244.73560000114958,
+        238.93800000223564
+      ],
+      "warm_ms_median_of_block_medians": 19.89799999864772,
+      "warm_ms_block_median_range": [
+        14.80710000032559,
+        27.24050000324496
+      ],
+      "warm_ms_block_medians": [
+        27.24050000324496,
+        19.89799999864772,
+        14.80710000032559
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 89663488,
+          "torch_peak_reserved_bytes": 121634816,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 91182704,
+          "reserved_peak_upper_bound_bytes": 155189248
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 89663488,
+          "torch_peak_reserved_bytes": 148897792,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 91182704,
+          "reserved_peak_upper_bound_bytes": 182452224
+        }
+      },
+      "peak_used_upper_bound_MiB": 86.95860290527344,
+      "peak_reserved_upper_bound_MiB": 174.0,
+      "torch_peak_allocated_MiB": 85.509765625,
+      "native_used_peak_MiB": 1.4488372802734375,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 26.937300001009135,
+      "startup_transition_ms_block_medians": [
+        15.624699997715652,
+        26.937300001009135,
+        27.31349999885424
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0016648353730955,
+        1.07160883682235,
+        0.9951656418772975
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 13114,
+      "first_ms_median": 262.38269999885233,
+      "first_ms_range": [
+        260.41840000107186,
+        290.37670000252547
+      ],
+      "first_ms_blocks": [
+        290.37670000252547,
+        262.38269999885233,
+        260.41840000107186
+      ],
+      "warm_ms_median_of_block_medians": 22.348599995893892,
+      "warm_ms_block_median_range": [
+        20.466800000576768,
+        30.38649999871268
+      ],
+      "warm_ms_block_medians": [
+        30.38649999871268,
+        20.466800000576768,
+        22.348599995893892
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 90280960,
+          "torch_peak_reserved_bytes": 123731968,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 91800176,
+          "reserved_peak_upper_bound_bytes": 157286400
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 90280960,
+          "torch_peak_reserved_bytes": 150994944,
+          "native_pool_used_peak_bytes": 1519216,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 91800176,
+          "reserved_peak_upper_bound_bytes": 184549376
+        }
+      },
+      "peak_used_upper_bound_MiB": 87.54747009277344,
+      "peak_reserved_upper_bound_MiB": 176.0,
+      "torch_peak_allocated_MiB": 86.0986328125,
+      "native_used_peak_MiB": 1.4488372802734375,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 29.900700003054226,
+      "startup_transition_ms_block_medians": [
+        19.013900000572903,
+        29.900700003054226,
+        29.97500000128639
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0078354996044077,
+        0.946227028609716,
+        0.8953077221052762
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 61117,
+      "first_ms_median": 489.8838999979489,
+      "first_ms_range": [
+        386.2875000013446,
+        490.5451000013272
+      ],
+      "first_ms_blocks": [
+        386.2875000013446,
+        489.8838999979489,
+        490.5451000013272
+      ],
+      "warm_ms_median_of_block_medians": 115.4458999990311,
+      "warm_ms_block_median_range": [
+        114.33569999644533,
+        189.82080000205315
+      ],
+      "warm_ms_block_medians": [
+        189.82080000205315,
+        115.4458999990311,
+        114.33569999644533
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 431029248,
+          "torch_peak_reserved_bytes": 578813952,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 431029248,
+          "reserved_peak_upper_bound_bytes": 578813952
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 431029248,
+          "torch_peak_reserved_bytes": 578813952,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 431029248,
+          "reserved_peak_upper_bound_bytes": 578813952
+        }
+      },
+      "peak_used_upper_bound_MiB": 411.0615234375,
+      "peak_reserved_upper_bound_MiB": 552.0,
+      "torch_peak_allocated_MiB": 411.0615234375,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 263.78010000189533,
+      "startup_transition_ms_block_medians": [
+        117.80850000286591,
+        263.78010000189533,
+        264.53720000063186
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9716754313228544,
+        0.9994899085354692,
+        1.0002512804820458
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 61117,
+      "first_ms_median": 354.0522000002966,
+      "first_ms_range": [
+        342.5427000001946,
+        355.7150000015099
+      ],
+      "first_ms_blocks": [
+        342.5427000001946,
+        354.0522000002966,
+        355.7150000015099
+      ],
+      "warm_ms_median_of_block_medians": 66.8562999999267,
+      "warm_ms_block_median_range": [
+        66.55780000437517,
+        99.01180000088061
+      ],
+      "warm_ms_block_medians": [
+        99.01180000088061,
+        66.8562999999267,
+        66.55780000437517
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 432985600,
+          "torch_peak_reserved_bytes": 578813952,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 440072378,
+          "reserved_peak_upper_bound_bytes": 612368384
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 432985600,
+          "torch_peak_reserved_bytes": 578813952,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 440072378,
+          "reserved_peak_upper_bound_bytes": 612368384
+        }
+      },
+      "peak_used_upper_bound_MiB": 419.68572425842285,
+      "peak_reserved_upper_bound_MiB": 584.0,
+      "torch_peak_allocated_MiB": 412.92724609375,
+      "native_used_peak_MiB": 6.758478164672852,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 153.70679999978165,
+      "startup_transition_ms_block_medians": [
+        70.37789999958477,
+        153.83829999700538,
+        153.70679999978165
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9820089793020522,
+        1.0067271786845322,
+        1.0020645449865968
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 61117,
+      "first_ms_median": 382.02110000202083,
+      "first_ms_range": [
+        342.54349999901024,
+        426.66689999896334
+      ],
+      "first_ms_blocks": [
+        342.54349999901024,
+        382.02110000202083,
+        426.66689999896334
+      ],
+      "warm_ms_median_of_block_medians": 71.59640000099898,
+      "warm_ms_block_median_range": [
+        69.31030000123428,
+        102.76099999828148
+      ],
+      "warm_ms_block_medians": [
+        102.76099999828148,
+        71.59640000099898,
+        69.31030000123428
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 436227072,
+          "torch_peak_reserved_bytes": 601882624,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 443313850,
+          "reserved_peak_upper_bound_bytes": 635437056
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 436227072,
+          "torch_peak_reserved_bytes": 601882624,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 443313850,
+          "reserved_peak_upper_bound_bytes": 635437056
+        }
+      },
+      "peak_used_upper_bound_MiB": 422.77703285217285,
+      "peak_reserved_upper_bound_MiB": 606.0,
+      "torch_peak_allocated_MiB": 416.0185546875,
+      "native_used_peak_MiB": 6.758478164672852,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 159.3639999991865,
+      "startup_transition_ms_block_medians": [
+        70.89999999880092,
+        159.3639999991865,
+        165.2256999987003
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.95843039349022,
+        1.0131897126194809,
+        0.9900665588442146
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 61117,
+      "first_ms_median": 486.87470000004396,
+      "first_ms_range": [
+        327.61500000196975,
+        527.534699998796
+      ],
+      "first_ms_blocks": [
+        327.61500000196975,
+        486.87470000004396,
+        527.534699998796
+      ],
+      "warm_ms_median_of_block_medians": 115.10280000220519,
+      "warm_ms_block_median_range": [
+        114.36010000034003,
+        201.7249999989872
+      ],
+      "warm_ms_block_medians": [
+        201.7249999989872,
+        115.10280000220519,
+        114.36010000034003
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 353797632,
+          "torch_peak_reserved_bytes": 452984832,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 353797632,
+          "reserved_peak_upper_bound_bytes": 452984832
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 353797632,
+          "torch_peak_reserved_bytes": 452984832,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 353797632,
+          "reserved_peak_upper_bound_bytes": 452984832
+        }
+      },
+      "peak_used_upper_bound_MiB": 337.40771484375,
+      "peak_reserved_upper_bound_MiB": 432.0,
+      "torch_peak_allocated_MiB": 337.40771484375,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 253.26440000208095,
+      "startup_transition_ms_block_medians": [
+        114.53220000112196,
+        253.26440000208095,
+        262.2209000001021
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9712067050242247,
+        0.9997944956364834,
+        1.0018341045026744
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 61117,
+      "first_ms_median": 339.85609999945154,
+      "first_ms_range": [
+        271.70330000080867,
+        441.9969000009587
+      ],
+      "first_ms_blocks": [
+        271.70330000080867,
+        339.85609999945154,
+        441.9969000009587
+      ],
+      "warm_ms_median_of_block_medians": 66.61309999981313,
+      "warm_ms_block_median_range": [
+        65.6375999969896,
+        99.47309999915888
+      ],
+      "warm_ms_block_medians": [
+        99.47309999915888,
+        66.61309999981313,
+        65.6375999969896
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 353797632,
+          "torch_peak_reserved_bytes": 452984832,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 360884410,
+          "reserved_peak_upper_bound_bytes": 486539264
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 353797632,
+          "torch_peak_reserved_bytes": 452984832,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 360884410,
+          "reserved_peak_upper_bound_bytes": 486539264
+        }
+      },
+      "peak_used_upper_bound_MiB": 344.16619300842285,
+      "peak_reserved_upper_bound_MiB": 464.0,
+      "torch_peak_allocated_MiB": 337.40771484375,
+      "native_used_peak_MiB": 6.758478164672852,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 139.3835000017134,
+      "startup_transition_ms_block_medians": [
+        70.76990000132355,
+        139.3835000017134,
+        145.11560000028112
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9848563853883956,
+        0.9852719422812551,
+        1.0001957172259028
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 61117,
+      "first_ms_median": 371.67930000214255,
+      "first_ms_range": [
+        305.75189999944996,
+        385.4308000009041
+      ],
+      "first_ms_blocks": [
+        305.75189999944996,
+        371.67930000214255,
+        385.4308000009041
+      ],
+      "warm_ms_median_of_block_medians": 71.44940000216593,
+      "warm_ms_block_median_range": [
+        69.26770000427496,
+        105.67660000015167
+      ],
+      "warm_ms_block_medians": [
+        105.67660000015167,
+        71.44940000216593,
+        69.26770000427496
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 356671488,
+          "torch_peak_reserved_bytes": 455081984,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 363758266,
+          "reserved_peak_upper_bound_bytes": 488636416
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 356671488,
+          "torch_peak_reserved_bytes": 455081984,
+          "native_pool_used_peak_bytes": 7086778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 363758266,
+          "reserved_peak_upper_bound_bytes": 488636416
+        }
+      },
+      "peak_used_upper_bound_MiB": 346.90691566467285,
+      "peak_reserved_upper_bound_MiB": 466.0,
+      "torch_peak_allocated_MiB": 340.1484375,
+      "native_used_peak_MiB": 6.758478164672852,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 144.58200000080978,
+      "startup_transition_ms_block_medians": [
+        74.40029999997932,
+        144.58200000080978,
+        146.1308000034478
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9826082452176608,
+        0.9959346346549787,
+        0.9870831974355889
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 289873,
+      "first_ms_median": 3676.3615000018035,
+      "first_ms_range": [
+        1794.5823000009113,
+        3834.5568000004278
+      ],
+      "first_ms_blocks": [
+        1794.5823000009113,
+        3834.5568000004278,
+        3676.3615000018035
+      ],
+      "warm_ms_median_of_block_medians": 1536.7797000071732,
+      "warm_ms_block_median_range": [
+        1528.0894999996235,
+        1554.3233999997028
+      ],
+      "warm_ms_block_medians": [
+        1554.3233999997028,
+        1528.0894999996235,
+        1536.7797000071732
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1931442176,
+          "torch_peak_reserved_bytes": 2594177024,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1931442176,
+          "reserved_peak_upper_bound_bytes": 2594177024
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1931442176,
+          "torch_peak_reserved_bytes": 2594177024,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1931442176,
+          "reserved_peak_upper_bound_bytes": 2594177024
+        }
+      },
+      "peak_used_upper_bound_MiB": 1841.966796875,
+      "peak_reserved_upper_bound_MiB": 2474.0,
+      "torch_peak_allocated_MiB": 1841.966796875,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 1551.8360999994911,
+      "startup_transition_ms_block_medians": [
+        1523.9136000018334,
+        1583.0771999972058,
+        1551.8360999994911
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.003282788230824,
+        1.0013209538540506,
+        1.0014361275531645
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 289873,
+      "first_ms_median": 1625.555799997528,
+      "first_ms_range": [
+        802.4358000002394,
+        1664.792399998987
+      ],
+      "first_ms_blocks": [
+        802.4358000002394,
+        1664.792399998987,
+        1625.555799997528
+      ],
+      "warm_ms_median_of_block_medians": 518.2746999998926,
+      "warm_ms_block_median_range": [
+        518.2714000002306,
+        527.5707000000693
+      ],
+      "warm_ms_block_medians": [
+        527.5707000000693,
+        518.2714000002306,
+        518.2746999998926
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1940718592,
+          "torch_peak_reserved_bytes": 2615148544,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1974295378,
+          "reserved_peak_upper_bound_bytes": 2682257408
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1940718592,
+          "torch_peak_reserved_bytes": 2615148544,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1974295378,
+          "reserved_peak_upper_bound_bytes": 2682257408
+        }
+      },
+      "peak_used_upper_bound_MiB": 1882.834794998169,
+      "peak_reserved_upper_bound_MiB": 2558.0,
+      "torch_peak_allocated_MiB": 1850.8134765625,
+      "native_used_peak_MiB": 32.021318435668945,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 880.9708000007959,
+      "startup_transition_ms_block_medians": [
+        516.1444000004849,
+        880.9708000007959,
+        915.6229000000167
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9977550875913338,
+        1.0026395147889187,
+        0.9988371695879271
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 289873,
+      "first_ms_median": 1653.0942999997933,
+      "first_ms_range": [
+        815.5388999985007,
+        1673.2986999995774
+      ],
+      "first_ms_blocks": [
+        815.5388999985007,
+        1653.0942999997933,
+        1673.2986999995774
+      ],
+      "warm_ms_median_of_block_medians": 526.0312000027625,
+      "warm_ms_block_median_range": [
+        523.1831999990391,
+        536.9639000018651
+      ],
+      "warm_ms_block_medians": [
+        536.9639000018651,
+        526.0312000027625,
+        523.1831999990391
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1956183552,
+          "torch_peak_reserved_bytes": 2619342848,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1989760338,
+          "reserved_peak_upper_bound_bytes": 2686451712
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1956183552,
+          "torch_peak_reserved_bytes": 2619342848,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1989760338,
+          "reserved_peak_upper_bound_bytes": 2686451712
+        }
+      },
+      "peak_used_upper_bound_MiB": 1897.583330154419,
+      "peak_reserved_upper_bound_MiB": 2562.0,
+      "torch_peak_allocated_MiB": 1865.56201171875,
+      "native_used_peak_MiB": 32.021318435668945,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 896.5237999982492,
+      "startup_transition_ms_block_medians": [
+        527.1252999991702,
+        903.2426000012492,
+        896.5237999982492
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0085195693217686,
+        0.9990721967720345,
+        0.9998640393636249
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 289873,
+      "first_ms_median": 3647.54229999744,
+      "first_ms_range": [
+        1819.1955999973288,
+        3893.7411999977485
+      ],
+      "first_ms_blocks": [
+        1819.1955999973288,
+        3893.7411999977485,
+        3647.54229999744
+      ],
+      "warm_ms_median_of_block_medians": 1549.6369999964372,
+      "warm_ms_block_median_range": [
+        1542.674899999838,
+        1603.9520999984234
+      ],
+      "warm_ms_block_medians": [
+        1603.9520999984234,
+        1542.674899999838,
+        1549.6369999964372
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1605428224,
+          "torch_peak_reserved_bytes": 1956642816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1605428224,
+          "reserved_peak_upper_bound_bytes": 1956642816
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1605428224,
+          "torch_peak_reserved_bytes": 1956642816,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1605428224,
+          "reserved_peak_upper_bound_bytes": 1956642816
+        }
+      },
+      "peak_used_upper_bound_MiB": 1531.0556640625,
+      "peak_reserved_upper_bound_MiB": 1866.0,
+      "torch_peak_allocated_MiB": 1531.0556640625,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 1549.4814999983646,
+      "startup_transition_ms_block_medians": [
+        1540.5635000024631,
+        1559.6311999979662,
+        1549.4814999983646
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9978647508293231,
+        0.9999109955722922,
+        0.9989196067373785
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 289873,
+      "first_ms_median": 1504.8311000027752,
+      "first_ms_range": [
+        847.8392000033637,
+        1507.2917000034067
+      ],
+      "first_ms_blocks": [
+        847.8392000033637,
+        1507.2917000034067,
+        1504.8311000027752
+      ],
+      "warm_ms_median_of_block_medians": 542.6240000015241,
+      "warm_ms_block_median_range": [
+        541.5439999997034,
+        589.0116000009584
+      ],
+      "warm_ms_block_medians": [
+        589.0116000009584,
+        542.6240000015241,
+        541.5439999997034
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1605428224,
+          "torch_peak_reserved_bytes": 1979711488,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1639005010,
+          "reserved_peak_upper_bound_bytes": 2046820352
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1605428224,
+          "torch_peak_reserved_bytes": 1979711488,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1639005010,
+          "reserved_peak_upper_bound_bytes": 2046820352
+        }
+      },
+      "peak_used_upper_bound_MiB": 1563.076982498169,
+      "peak_reserved_upper_bound_MiB": 1952.0,
+      "torch_peak_allocated_MiB": 1531.0556640625,
+      "native_used_peak_MiB": 32.021318435668945,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 816.0744000015256,
+      "startup_transition_ms_block_medians": [
+        543.2223999996495,
+        880.7554999984859,
+        816.0744000015256
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0038832603239176,
+        1.0033283079875617,
+        1.0011324844571763
+      ]
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 289873,
+      "first_ms_median": 1538.6660000003758,
+      "first_ms_range": [
+        850.0547999974515,
+        1544.9100000005274
+      ],
+      "first_ms_blocks": [
+        850.0547999974515,
+        1544.9100000005274,
+        1538.6660000003758
+      ],
+      "warm_ms_median_of_block_medians": 549.254599998676,
+      "warm_ms_block_median_range": [
+        547.3517999998876,
+        593.9456000014616
+      ],
+      "warm_ms_block_medians": [
+        593.9456000014616,
+        549.254599998676,
+        547.3517999998876
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1619153408,
+          "torch_peak_reserved_bytes": 1981808640,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1652730194,
+          "reserved_peak_upper_bound_bytes": 2048917504
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1619153408,
+          "torch_peak_reserved_bytes": 1981808640,
+          "native_pool_used_peak_bytes": 33576786,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1652730194,
+          "reserved_peak_upper_bound_bytes": 2048917504
+        }
+      },
+      "peak_used_upper_bound_MiB": 1576.166337966919,
+      "peak_reserved_upper_bound_MiB": 1954.0,
+      "torch_peak_allocated_MiB": 1544.14501953125,
+      "native_used_peak_MiB": 32.021318435668945,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 910.0036000018008,
+      "startup_transition_ms_block_medians": [
+        549.9707999988459,
+        928.3994999968854,
+        910.0036000018008
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0053493619749556,
+        1.0042446849046631,
+        1.00079013811844
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 23474,
+      "first_ms_median": 256.32540000151494,
+      "first_ms_range": [
+        253.39429999803542,
+        360.99539999850094
+      ],
+      "first_ms_blocks": [
+        253.39429999803542,
+        360.99539999850094,
+        256.32540000151494
+      ],
+      "warm_ms_median_of_block_medians": 30.415900000662077,
+      "warm_ms_block_median_range": [
+        30.325299998366972,
+        78.97159999993164
+      ],
+      "warm_ms_block_medians": [
+        78.97159999993164,
+        30.325299998366972,
+        30.415900000662077
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 184005120,
+          "torch_peak_reserved_bytes": 257949696,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 184005120,
+          "reserved_peak_upper_bound_bytes": 257949696
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 184005120,
+          "torch_peak_reserved_bytes": 257949696,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 184005120,
+          "reserved_peak_upper_bound_bytes": 257949696
+        }
+      },
+      "peak_used_upper_bound_MiB": 175.48095703125,
+      "peak_reserved_upper_bound_MiB": 246.0,
+      "torch_peak_allocated_MiB": 175.48095703125,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 78.94519999899785,
+      "startup_transition_ms_block_medians": [
+        36.6424999992887,
+        80.40830000027199,
+        78.94519999899785
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0095304053733634,
+        1.0081451043544052,
+        1.001961336526316
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 23474,
+      "first_ms_median": 262.6605000004929,
+      "first_ms_range": [
+        242.26370000178576,
+        305.6039000002784
+      ],
+      "first_ms_blocks": [
+        262.6605000004929,
+        305.6039000002784,
+        242.26370000178576
+      ],
+      "warm_ms_median_of_block_medians": 22.241599999688333,
+      "warm_ms_block_median_range": [
+        22.015700000338256,
+        50.88749999777065
+      ],
+      "warm_ms_block_medians": [
+        50.88749999777065,
+        22.241599999688333,
+        22.015700000338256
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 184756736,
+          "torch_peak_reserved_bytes": 257949696,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 187475968,
+          "reserved_peak_upper_bound_bytes": 291504128
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 184756736,
+          "torch_peak_reserved_bytes": 257949696,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 187475968,
+          "reserved_peak_upper_bound_bytes": 291504128
+        }
+      },
+      "peak_used_upper_bound_MiB": 178.791015625,
+      "peak_reserved_upper_bound_MiB": 278.0,
+      "torch_peak_allocated_MiB": 176.19775390625,
+      "native_used_peak_MiB": 2.59326171875,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 50.168800000392366,
+      "startup_transition_ms_block_medians": [
+        26.78600000217557,
+        51.01289999947767,
+        50.168800000392366
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9979165011835385,
+        1.065617324309892,
+        0.9847151275763216
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 23474,
+      "first_ms_median": 296.5619000024162,
+      "first_ms_range": [
+        288.0616000002192,
+        382.3080000001937
+      ],
+      "first_ms_blocks": [
+        288.0616000002192,
+        382.3080000001937,
+        296.5619000024162
+      ],
+      "warm_ms_median_of_block_medians": 25.327900002594106,
+      "warm_ms_block_median_range": [
+        25.272700000641635,
+        56.592700002511265
+      ],
+      "warm_ms_block_medians": [
+        56.592700002511265,
+        25.272700000641635,
+        25.327900002594106
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 186002432,
+          "torch_peak_reserved_bytes": 262144000,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 188721664,
+          "reserved_peak_upper_bound_bytes": 295698432
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 186002432,
+          "torch_peak_reserved_bytes": 262144000,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 188721664,
+          "reserved_peak_upper_bound_bytes": 295698432
+        }
+      },
+      "peak_used_upper_bound_MiB": 179.97900390625,
+      "peak_reserved_upper_bound_MiB": 282.0,
+      "torch_peak_allocated_MiB": 177.3857421875,
+      "native_used_peak_MiB": 2.59326171875,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 54.40200000157347,
+      "startup_transition_ms_block_medians": [
+        33.595900000364054,
+        58.71420000039507,
+        54.40200000157347
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0003227831059018,
+        1.0380181664494652,
+        1.042451757638241
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 23474,
+      "first_ms_median": 339.6729000014602,
+      "first_ms_range": [
+        256.9183999985398,
+        398.8320999997086
+      ],
+      "first_ms_blocks": [
+        398.8320999997086,
+        339.6729000014602,
+        256.9183999985398
+      ],
+      "warm_ms_median_of_block_medians": 27.39320000182488,
+      "warm_ms_block_median_range": [
+        27.331299999787007,
+        71.55979999879492
+      ],
+      "warm_ms_block_medians": [
+        71.55979999879492,
+        27.39320000182488,
+        27.331299999787007
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 147160064,
+          "torch_peak_reserved_bytes": 192937984,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 147160064,
+          "reserved_peak_upper_bound_bytes": 192937984
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 147160064,
+          "torch_peak_reserved_bytes": 192937984,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 147160064,
+          "reserved_peak_upper_bound_bytes": 192937984
+        }
+      },
+      "peak_used_upper_bound_MiB": 140.3427734375,
+      "peak_reserved_upper_bound_MiB": 184.0,
+      "torch_peak_allocated_MiB": 140.3427734375,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 70.90489999973215,
+      "startup_transition_ms_block_medians": [
+        35.66270000010263,
+        71.7919000016991,
+        70.90489999973215
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0006299935835994,
+        0.9933287055387923,
+        1.0133322994634428
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 23474,
+      "first_ms_median": 271.28860000084387,
+      "first_ms_range": [
+        253.23740000021644,
+        322.3999999972875
+      ],
+      "first_ms_blocks": [
+        271.28860000084387,
+        322.3999999972875,
+        253.23740000021644
+      ],
+      "warm_ms_median_of_block_medians": 20.89890000206651,
+      "warm_ms_block_median_range": [
+        20.203500000206986,
+        45.10880000088946
+      ],
+      "warm_ms_block_medians": [
+        45.10880000088946,
+        20.203500000206986,
+        20.89890000206651
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 147160064,
+          "torch_peak_reserved_bytes": 195035136,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 149879296,
+          "reserved_peak_upper_bound_bytes": 228589568
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 147160064,
+          "torch_peak_reserved_bytes": 195035136,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 149879296,
+          "reserved_peak_upper_bound_bytes": 228589568
+        }
+      },
+      "peak_used_upper_bound_MiB": 142.93603515625,
+      "peak_reserved_upper_bound_MiB": 218.0,
+      "torch_peak_allocated_MiB": 140.3427734375,
+      "native_used_peak_MiB": 2.59326171875,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 43.38579999966896,
+      "startup_transition_ms_block_medians": [
+        23.791399999026908,
+        43.72409999996307,
+        43.38579999966896
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9986407914796867,
+        1.4269158301979425,
+        1.0016344765401184
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 23474,
+      "first_ms_median": 322.0383000007132,
+      "first_ms_range": [
+        280.317600001581,
+        334.24640000157524
+      ],
+      "first_ms_blocks": [
+        334.24640000157524,
+        322.0383000007132,
+        280.317600001581
+      ],
+      "warm_ms_median_of_block_medians": 25.96320000156993,
+      "warm_ms_block_median_range": [
+        24.56990000064252,
+        49.109600000520004
+      ],
+      "warm_ms_block_medians": [
+        49.109600000520004,
+        24.56990000064252,
+        25.96320000156993
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 148264448,
+          "torch_peak_reserved_bytes": 197132288,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 150983680,
+          "reserved_peak_upper_bound_bytes": 230686720
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 148264448,
+          "torch_peak_reserved_bytes": 197132288,
+          "native_pool_used_peak_bytes": 2719232,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 150983680,
+          "reserved_peak_upper_bound_bytes": 230686720
+        }
+      },
+      "peak_used_upper_bound_MiB": 143.9892578125,
+      "peak_reserved_upper_bound_MiB": 220.0,
+      "torch_peak_allocated_MiB": 141.39599609375,
+      "native_used_peak_MiB": 2.59326171875,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 47.18180000054417,
+      "startup_transition_ms_block_medians": [
+        36.06270000091172,
+        48.86339999939082,
+        47.18180000054417
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0600907215688729,
+        1.2716993408656898,
+        1.0331394040745447
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 100801,
+      "first_ms_median": 920.9553000000597,
+      "first_ms_range": [
+        508.7777000007918,
+        1002.0282999976189
+      ],
+      "first_ms_blocks": [
+        508.7777000007918,
+        1002.0282999976189,
+        920.9553000000597
+      ],
+      "warm_ms_median_of_block_medians": 252.59989999904064,
+      "warm_ms_block_median_range": [
+        251.1651000022539,
+        491.2957999986247
+      ],
+      "warm_ms_block_medians": [
+        491.2957999986247,
+        251.1651000022539,
+        252.59989999904064
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 692207616,
+          "torch_peak_reserved_bytes": 929038336,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 692207616,
+          "reserved_peak_upper_bound_bytes": 929038336
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 692207616,
+          "torch_peak_reserved_bytes": 929038336,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 692207616,
+          "reserved_peak_upper_bound_bytes": 929038336
+        }
+      },
+      "peak_used_upper_bound_MiB": 660.140625,
+      "peak_reserved_upper_bound_MiB": 886.0,
+      "torch_peak_allocated_MiB": 660.140625,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 503.07339999926626,
+      "startup_transition_ms_block_medians": [
+        256.75780000165105,
+        515.438999998878,
+        503.07339999926626
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9260451637031869,
+        1.0004899075413738,
+        0.9998303375633824
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 100801,
+      "first_ms_median": 510.34470000013243,
+      "first_ms_range": [
+        484.56420000002254,
+        513.0184999979974
+      ],
+      "first_ms_blocks": [
+        484.56420000002254,
+        510.34470000013243,
+        513.0184999979974
+      ],
+      "warm_ms_median_of_block_medians": 121.55470000288915,
+      "warm_ms_block_median_range": [
+        121.47720000211848,
+        199.71319999967818
+      ],
+      "warm_ms_block_medians": [
+        199.71319999967818,
+        121.47720000211848,
+        121.55470000288915
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 695433728,
+          "torch_peak_reserved_bytes": 931135488,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 707107506,
+          "reserved_peak_upper_bound_bytes": 964689920
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 695433728,
+          "torch_peak_reserved_bytes": 931135488,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 707107506,
+          "reserved_peak_upper_bound_bytes": 964689920
+        }
+      },
+      "peak_used_upper_bound_MiB": 674.3502674102783,
+      "peak_reserved_upper_bound_MiB": 920.0,
+      "torch_peak_allocated_MiB": 663.21728515625,
+      "native_used_peak_MiB": 11.13298225402832,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 272.7133000007598,
+      "startup_transition_ms_block_medians": [
+        123.61679999958142,
+        272.7133000007598,
+        282.5217999998131
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9194404010081703,
+        1.0013709543499785,
+        0.9944333787062869
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 100801,
+      "first_ms_median": 604.2177000017546,
+      "first_ms_range": [
+        529.0017999977863,
+        628.7453000004462
+      ],
+      "first_ms_blocks": [
+        604.2177000017546,
+        628.7453000004462,
+        529.0017999977863
+      ],
+      "warm_ms_median_of_block_medians": 127.9080000022077,
+      "warm_ms_block_median_range": [
+        126.79010000283597,
+        208.39500000147382
+      ],
+      "warm_ms_block_medians": [
+        208.39500000147382,
+        126.79010000283597,
+        127.9080000022077
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 701587968,
+          "torch_peak_reserved_bytes": 954204160,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 713261746,
+          "reserved_peak_upper_bound_bytes": 987758592
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 701587968,
+          "torch_peak_reserved_bytes": 954204160,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 713261746,
+          "reserved_peak_upper_bound_bytes": 987758592
+        }
+      },
+      "peak_used_upper_bound_MiB": 680.2194080352783,
+      "peak_reserved_upper_bound_MiB": 942.0,
+      "torch_peak_allocated_MiB": 669.08642578125,
+      "native_used_peak_MiB": 11.13298225402832,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 297.59379999813973,
+      "startup_transition_ms_block_medians": [
+        129.5602999998664,
+        297.59379999813973,
+        298.34499999924446
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9288224887237877,
+        1.0070828172326618,
+        0.9785264955073483
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 100801,
+      "first_ms_median": 908.4288999983983,
+      "first_ms_range": [
+        863.1504999975732,
+        940.2304000032018
+      ],
+      "first_ms_blocks": [
+        940.2304000032018,
+        908.4288999983983,
+        863.1504999975732
+      ],
+      "warm_ms_median_of_block_medians": 257.8725999992457,
+      "warm_ms_block_median_range": [
+        257.318200001464,
+        530.9030000025814
+      ],
+      "warm_ms_block_medians": [
+        530.9030000025814,
+        257.318200001464,
+        257.8725999992457
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 570992128,
+          "torch_peak_reserved_bytes": 698351616,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 570992128,
+          "reserved_peak_upper_bound_bytes": 698351616
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 570992128,
+          "torch_peak_reserved_bytes": 698351616,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 570992128,
+          "reserved_peak_upper_bound_bytes": 698351616
+        }
+      },
+      "peak_used_upper_bound_MiB": 544.54052734375,
+      "peak_reserved_upper_bound_MiB": 666.0,
+      "torch_peak_allocated_MiB": 544.54052734375,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 502.6090999999724,
+      "startup_transition_ms_block_medians": [
+        558.6237000024994,
+        502.6090999999724,
+        475.43669999868143
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.114614606923783,
+        0.9978971463919337,
+        0.9974928465288182
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 100801,
+      "first_ms_median": 507.87449999916134,
+      "first_ms_range": [
+        461.68799999941257,
+        548.009699999966
+      ],
+      "first_ms_blocks": [
+        507.87449999916134,
+        548.009699999966,
+        461.68799999941257
+      ],
+      "warm_ms_median_of_block_medians": 127.53169999996317,
+      "warm_ms_block_median_range": [
+        127.46619999961695,
+        210.33660000102827
+      ],
+      "warm_ms_block_medians": [
+        210.33660000102827,
+        127.53169999996317,
+        127.46619999961695
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 570992128,
+          "torch_peak_reserved_bytes": 698351616,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 582665906,
+          "reserved_peak_upper_bound_bytes": 731906048
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 570992128,
+          "torch_peak_reserved_bytes": 698351616,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 582665906,
+          "reserved_peak_upper_bound_bytes": 731906048
+        }
+      },
+      "peak_used_upper_bound_MiB": 555.6735095977783,
+      "peak_reserved_upper_bound_MiB": 698.0,
+      "torch_peak_allocated_MiB": 544.54052734375,
+      "native_used_peak_MiB": 11.13298225402832,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 270.65159999983734,
+      "startup_transition_ms_block_medians": [
+        270.88459999868064,
+        270.65159999983734,
+        262.7301000029547
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0665678987442264,
+        0.9910534933135249,
+        0.9969615291198116
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 100801,
+      "first_ms_median": 500.2223999981652,
+      "first_ms_range": [
+        477.4646000005305,
+        541.6303999991214
+      ],
+      "first_ms_blocks": [
+        541.6303999991214,
+        500.2223999981652,
+        477.4646000005305
+      ],
+      "warm_ms_median_of_block_medians": 133.12049999512965,
+      "warm_ms_block_median_range": [
+        132.1529000015289,
+        223.23929999765824
+      ],
+      "warm_ms_block_medians": [
+        223.23929999765824,
+        132.1529000015289,
+        133.12049999512965
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 575322624,
+          "torch_peak_reserved_bytes": 721420288,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 586996402,
+          "reserved_peak_upper_bound_bytes": 754974720
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 575322624,
+          "torch_peak_reserved_bytes": 721420288,
+          "native_pool_used_peak_bytes": 11673778,
+          "native_pool_reserved_peak_bytes": 33554432,
+          "used_peak_upper_bound_bytes": 586996402,
+          "reserved_peak_upper_bound_bytes": 754974720
+        }
+      },
+      "peak_used_upper_bound_MiB": 559.8033924102783,
+      "peak_reserved_upper_bound_MiB": 720.0,
+      "torch_peak_allocated_MiB": 548.67041015625,
+      "native_used_peak_MiB": 11.13298225402832,
+      "native_reserved_peak_MiB": 32.0,
+      "startup_transition_ms_median_of_block_medians": 276.1733000006643,
+      "startup_transition_ms_block_medians": [
+        285.46180000194,
+        276.1733000006643,
+        271.2578000027861
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0910518763534027,
+        0.9818237622947737,
+        1.018057677572567
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 297866,
+      "first_ms_median": 4051.31640000036,
+      "first_ms_range": [
+        3953.424700001051,
+        4241.343699999561
+      ],
+      "first_ms_blocks": [
+        3953.424700001051,
+        4241.343699999561,
+        4051.31640000036
+      ],
+      "warm_ms_median_of_block_medians": 1621.026000000711,
+      "warm_ms_block_median_range": [
+        1618.3217000034347,
+        1632.518500002334
+      ],
+      "warm_ms_block_medians": [
+        1621.026000000711,
+        1618.3217000034347,
+        1632.518500002334
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1989099520,
+          "torch_peak_reserved_bytes": 2682257408,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1989099520,
+          "reserved_peak_upper_bound_bytes": 2682257408
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1989099520,
+          "torch_peak_reserved_bytes": 2682257408,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1989099520,
+          "reserved_peak_upper_bound_bytes": 2682257408
+        }
+      },
+      "peak_used_upper_bound_MiB": 1896.953125,
+      "peak_reserved_upper_bound_MiB": 2558.0,
+      "torch_peak_allocated_MiB": 1896.953125,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 1640.932399997837,
+      "startup_transition_ms_block_medians": [
+        1678.8163000019267,
+        1640.932399997837,
+        1640.2774000016507
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9993834560322216,
+        0.9989577576519202,
+        1.0030602432901299
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 297866,
+      "first_ms_median": 1661.3093000014487,
+      "first_ms_range": [
+        1632.3296999980812,
+        1695.6004999992729
+      ],
+      "first_ms_blocks": [
+        1695.6004999992729,
+        1661.3093000014487,
+        1632.3296999980812
+      ],
+      "warm_ms_median_of_block_medians": 545.2043000004778,
+      "warm_ms_block_median_range": [
+        545.0326999998651,
+        547.2539000038523
+      ],
+      "warm_ms_block_medians": [
+        545.2043000004778,
+        545.0326999998651,
+        547.2539000038523
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1997867008,
+          "torch_peak_reserved_bytes": 2682257408,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 2032366224,
+          "reserved_peak_upper_bound_bytes": 2749366272
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1997867008,
+          "torch_peak_reserved_bytes": 2682257408,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 2032366224,
+          "reserved_peak_upper_bound_bytes": 2749366272
+        }
+      },
+      "peak_used_upper_bound_MiB": 1938.2154693603516,
+      "peak_reserved_upper_bound_MiB": 2622.0,
+      "torch_peak_allocated_MiB": 1905.314453125,
+      "native_used_peak_MiB": 32.90101623535156,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 898.6253000002762,
+      "startup_transition_ms_block_medians": [
+        891.9686999979604,
+        898.6253000002762,
+        903.5690000018803
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.9954498338818818,
+        0.999281487602031,
+        1.00305244412761
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 297866,
+      "first_ms_median": 1667.358399998193,
+      "first_ms_range": [
+        1649.5642000008957,
+        1827.2585999984585
+      ],
+      "first_ms_blocks": [
+        1827.2585999984585,
+        1649.5642000008957,
+        1667.358399998193
+      ],
+      "warm_ms_median_of_block_medians": 552.2724999973434,
+      "warm_ms_block_median_range": [
+        550.2283999994688,
+        552.4734999999055
+      ],
+      "warm_ms_block_medians": [
+        552.4734999999055,
+        550.2283999994688,
+        552.2724999973434
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 2014420992,
+          "torch_peak_reserved_bytes": 2686451712,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 2048920208,
+          "reserved_peak_upper_bound_bytes": 2753560576
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 2014420992,
+          "torch_peak_reserved_bytes": 2686451712,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 2048920208,
+          "reserved_peak_upper_bound_bytes": 2753560576
+        }
+      },
+      "peak_used_upper_bound_MiB": 1954.0025787353516,
+      "peak_reserved_upper_bound_MiB": 2626.0,
+      "torch_peak_allocated_MiB": 1921.1015625,
+      "native_used_peak_MiB": 32.90101623535156,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 953.16929999899,
+      "startup_transition_ms_block_medians": [
+        1022.7421999989019,
+        953.16929999899,
+        937.2961999979452
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        0.997833843751009,
+        0.9970624409879898,
+        1.0030787677540383
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 297866,
+      "first_ms_median": 3702.447100000427,
+      "first_ms_range": [
+        3641.290100000333,
+        3768.769300000713
+      ],
+      "first_ms_blocks": [
+        3702.447100000427,
+        3641.290100000333,
+        3768.769300000713
+      ],
+      "warm_ms_median_of_block_medians": 1648.6766999951215,
+      "warm_ms_block_median_range": [
+        1636.3996000000043,
+        1656.8657999996503
+      ],
+      "warm_ms_block_medians": [
+        1656.8657999996503,
+        1636.3996000000043,
+        1648.6766999951215
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1652978688,
+          "torch_peak_reserved_bytes": 2027945984,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1652978688,
+          "reserved_peak_upper_bound_bytes": 2027945984
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1652978688,
+          "torch_peak_reserved_bytes": 2027945984,
+          "native_pool_used_peak_bytes": 0,
+          "native_pool_reserved_peak_bytes": 0,
+          "used_peak_upper_bound_bytes": 1652978688,
+          "reserved_peak_upper_bound_bytes": 2027945984
+        }
+      },
+      "peak_used_upper_bound_MiB": 1576.4033203125,
+      "peak_reserved_upper_bound_MiB": 1934.0,
+      "torch_peak_allocated_MiB": 1576.4033203125,
+      "native_used_peak_MiB": 0.0,
+      "native_reserved_peak_MiB": 0.0,
+      "startup_transition_ms_median_of_block_medians": 1662.0168000008562,
+      "startup_transition_ms_block_medians": [
+        1680.9245000004012,
+        1662.0168000008562,
+        1656.5749000001233
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0006376027292774,
+        0.9993869578231837,
+        1.001449805095163
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 297866,
+      "first_ms_median": 1553.432700002304,
+      "first_ms_range": [
+        1551.9113000009384,
+        1562.2225999977672
+      ],
+      "first_ms_blocks": [
+        1562.2225999977672,
+        1551.9113000009384,
+        1553.432700002304
+      ],
+      "warm_ms_median_of_block_medians": 569.628899997042,
+      "warm_ms_block_median_range": [
+        569.3148999998812,
+        572.1470999997109
+      ],
+      "warm_ms_block_medians": [
+        572.1470999997109,
+        569.3148999998812,
+        569.628899997042
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1652978688,
+          "torch_peak_reserved_bytes": 2030043136,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1687477904,
+          "reserved_peak_upper_bound_bytes": 2097152000
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1652978688,
+          "torch_peak_reserved_bytes": 2030043136,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1687477904,
+          "reserved_peak_upper_bound_bytes": 2097152000
+        }
+      },
+      "peak_used_upper_bound_MiB": 1609.3043365478516,
+      "peak_reserved_upper_bound_MiB": 2000.0,
+      "torch_peak_allocated_MiB": 1576.4033203125,
+      "native_used_peak_MiB": 32.90101623535156,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 904.4639999992796,
+      "startup_transition_ms_block_medians": [
+        914.7367000005033,
+        904.4639999992796,
+        892.0417000008456
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0007904713781495,
+        1.0010441188045098,
+        1.0025312142314162
+      ]
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 297866,
+      "first_ms_median": 1547.4333999991359,
+      "first_ms_range": [
+        1537.457499998709,
+        1551.3895000003686
+      ],
+      "first_ms_blocks": [
+        1551.3895000003686,
+        1547.4333999991359,
+        1537.457499998709
+      ],
+      "warm_ms_median_of_block_medians": 574.9007999984315,
+      "warm_ms_block_median_range": [
+        574.8220999957994,
+        580.0328000004811
+      ],
+      "warm_ms_block_medians": [
+        580.0328000004811,
+        574.8220999957994,
+        574.9007999984315
+      ],
+      "memory_peak_over_3_processes": {
+        "first": {
+          "torch_peak_allocated_bytes": 1666979840,
+          "torch_peak_reserved_bytes": 2032140288,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1701479056,
+          "reserved_peak_upper_bound_bytes": 2099249152
+        },
+        "warm": {
+          "torch_peak_allocated_bytes": 1666979840,
+          "torch_peak_reserved_bytes": 2032140288,
+          "native_pool_used_peak_bytes": 34499216,
+          "native_pool_reserved_peak_bytes": 67108864,
+          "used_peak_upper_bound_bytes": 1701479056,
+          "reserved_peak_upper_bound_bytes": 2099249152
+        }
+      },
+      "peak_used_upper_bound_MiB": 1622.6568756103516,
+      "peak_reserved_upper_bound_MiB": 2002.0,
+      "torch_peak_allocated_MiB": 1589.755859375,
+      "native_used_peak_MiB": 32.90101623535156,
+      "native_reserved_peak_MiB": 64.0,
+      "startup_transition_ms_median_of_block_medians": 951.7186000011861,
+      "startup_transition_ms_block_medians": [
+        933.4982999971544,
+        960.2079999967827,
+        951.7186000011861
+      ],
+      "warmup_last5_over_previous5_blocks": [
+        1.0026944322374616,
+        0.9980727069792695,
+        1.0022675425109608
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "s3dis",
+      "size": "small",
+      "scene": "Area_5_storage_3",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 0.927308192518309,
+      "warm_speedup": 1.0826255471566295,
+      "peak_used_upper_bound_delta_MiB": 1.8497161865234375,
+      "peak_used_upper_bound_delta_percent": 1.6731380347505098,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "small",
+      "scene": "Area_5_storage_3",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 0.9098618439925725,
+      "warm_speedup": 0.7612919096055737,
+      "peak_used_upper_bound_delta_MiB": 2.5137786865234375,
+      "peak_used_upper_bound_delta_percent": 2.273807604653433,
+      "peak_reserved_upper_bound_delta_MiB": 34.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "small",
+      "scene": "Area_5_storage_3",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 0.9613644275569347,
+      "warm_speedup": 0.813111870628094,
+      "peak_used_upper_bound_delta_MiB": 1.4488372802734375,
+      "peak_used_upper_bound_delta_percent": 1.6943530013019403,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "small",
+      "scene": "Area_5_storage_3",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 0.8967058422637515,
+      "warm_speedup": 0.7239513886163286,
+      "peak_used_upper_bound_delta_MiB": 2.0377044677734375,
+      "peak_used_upper_bound_delta_percent": 2.38300789726138,
+      "peak_reserved_upper_bound_delta_MiB": 34.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "median",
+      "scene": "Area_5_office_23",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 1.3836487952836858,
+      "warm_speedup": 1.7267766837105503,
+      "peak_used_upper_bound_delta_MiB": 8.624200820922852,
+      "peak_used_upper_bound_delta_percent": 2.098031639838971,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "median",
+      "scene": "Area_5_office_23",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 1.282347755124933,
+      "warm_speedup": 1.6124539780969473,
+      "peak_used_upper_bound_delta_MiB": 11.715509414672852,
+      "peak_used_upper_bound_delta_percent": 2.850062276980325,
+      "peak_reserved_upper_bound_delta_MiB": 54.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "median",
+      "scene": "Area_5_office_23",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 1.432590734728109,
+      "warm_speedup": 1.72793039210798,
+      "peak_used_upper_bound_delta_MiB": 6.758478164672852,
+      "peak_used_upper_bound_delta_percent": 2.003059760445214,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "median",
+      "scene": "Area_5_office_23",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 1.309932245344945,
+      "warm_speedup": 1.610969441292942,
+      "peak_used_upper_bound_delta_MiB": 9.499200820922852,
+      "peak_used_upper_bound_delta_percent": 2.815347842689908,
+      "peak_reserved_upper_bound_delta_MiB": 34.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "large",
+      "scene": "Area_5_hallway_2",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 2.2616027699617534,
+      "warm_speedup": 2.965183714365165,
+      "peak_used_upper_bound_delta_MiB": 40.867998123168945,
+      "peak_used_upper_bound_delta_percent": 2.2187152446235148,
+      "peak_reserved_upper_bound_delta_MiB": 84.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "large",
+      "scene": "Area_5_hallway_2",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 2.223927273841706,
+      "warm_speedup": 2.9214611224564297,
+      "peak_used_upper_bound_delta_MiB": 55.616533279418945,
+      "peak_used_upper_bound_delta_percent": 3.019410196414807,
+      "peak_reserved_upper_bound_delta_MiB": 88.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "large",
+      "scene": "Area_5_hallway_2",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 2.42388816923754,
+      "warm_speedup": 2.855820973624618,
+      "peak_used_upper_bound_delta_MiB": 32.021318435668945,
+      "peak_used_upper_bound_delta_percent": 2.0914535759401165,
+      "peak_reserved_upper_bound_delta_MiB": 86.0
+    },
+    {
+      "dataset": "s3dis",
+      "size": "large",
+      "scene": "Area_5_hallway_2",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 2.370587443926459,
+      "warm_speedup": 2.8213455108071424,
+      "peak_used_upper_bound_delta_MiB": 45.110673904418945,
+      "peak_used_upper_bound_delta_percent": 2.9463771281001305,
+      "peak_reserved_upper_bound_delta_MiB": 88.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "small",
+      "scene": "scene0702_02_inst_nostuff",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 0.9758810327439181,
+      "warm_speedup": 1.3675230199755544,
+      "peak_used_upper_bound_delta_MiB": 3.31005859375,
+      "peak_used_upper_bound_delta_percent": 1.8862779470484314,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "small",
+      "scene": "scene0702_02_inst_nostuff",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 0.864323434667186,
+      "warm_speedup": 1.2008851897530728,
+      "peak_used_upper_bound_delta_MiB": 4.498046875,
+      "peak_used_upper_bound_delta_percent": 2.563267804721958,
+      "peak_reserved_upper_bound_delta_MiB": 36.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "small",
+      "scene": "scene0702_02_inst_nostuff",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 1.2520721475226149,
+      "warm_speedup": 1.310748412553589,
+      "peak_used_upper_bound_delta_MiB": 2.59326171875,
+      "peak_used_upper_bound_delta_percent": 1.8478056655370834,
+      "peak_reserved_upper_bound_delta_MiB": 34.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "small",
+      "scene": "scene0702_02_inst_nostuff",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 1.0547593252128953,
+      "warm_speedup": 1.0550779564987551,
+      "peak_used_upper_bound_delta_MiB": 3.646484375,
+      "peak_used_upper_bound_delta_percent": 2.598270139376946,
+      "peak_reserved_upper_bound_delta_MiB": 36.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "median",
+      "scene": "scene0697_01_inst_nostuff",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 1.8045750254677293,
+      "warm_speedup": 2.078075960806425,
+      "peak_used_upper_bound_delta_MiB": 14.20964241027832,
+      "peak_used_upper_bound_delta_percent": 2.152517489781558,
+      "peak_reserved_upper_bound_delta_MiB": 34.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "median",
+      "scene": "scene0697_01_inst_nostuff",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 1.5242110583608943,
+      "warm_speedup": 1.9748561465637862,
+      "peak_used_upper_bound_delta_MiB": 20.07878303527832,
+      "peak_used_upper_bound_delta_percent": 3.041591787398068,
+      "peak_reserved_upper_bound_delta_MiB": 56.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "median",
+      "scene": "scene0697_01_inst_nostuff",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 1.7886877565223267,
+      "warm_speedup": 2.022027464538779,
+      "peak_used_upper_bound_delta_MiB": 11.13298225402832,
+      "peak_used_upper_bound_delta_percent": 2.044472669157349,
+      "peak_reserved_upper_bound_delta_MiB": 32.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "median",
+      "scene": "scene0697_01_inst_nostuff",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 1.8160500209541404,
+      "warm_speedup": 1.9371366544497675,
+      "peak_used_upper_bound_delta_MiB": 15.26286506652832,
+      "peak_used_upper_bound_delta_percent": 2.8028887291419835,
+      "peak_reserved_upper_bound_delta_MiB": 54.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "large",
+      "scene": "scene0231_01_inst_nostuff",
+      "model": "pointnext",
+      "method": "frozen",
+      "first_speedup": 2.4386286165958544,
+      "warm_speedup": 2.9732450752851554,
+      "peak_used_upper_bound_delta_MiB": 41.26234436035156,
+      "peak_used_upper_bound_delta_percent": 2.1751905103269964,
+      "peak_reserved_upper_bound_delta_MiB": 64.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "large",
+      "scene": "scene0231_01_inst_nostuff",
+      "model": "pointnext",
+      "method": "session",
+      "first_speedup": 2.429781383537427,
+      "warm_speedup": 2.9351923190245914,
+      "peak_used_upper_bound_delta_MiB": 57.04945373535156,
+      "peak_used_upper_bound_delta_percent": 3.0074255912544867,
+      "peak_reserved_upper_bound_delta_MiB": 68.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "large",
+      "scene": "scene0231_01_inst_nostuff",
+      "model": "pointvector",
+      "method": "frozen",
+      "first_speedup": 2.383397169375239,
+      "warm_speedup": 2.8942996045384684,
+      "peak_used_upper_bound_delta_MiB": 32.90101623535156,
+      "peak_used_upper_bound_delta_percent": 2.087093817388652,
+      "peak_reserved_upper_bound_delta_MiB": 66.0
+    },
+    {
+      "dataset": "scannet",
+      "size": "large",
+      "scene": "scene0231_01_inst_nostuff",
+      "model": "pointvector",
+      "method": "session",
+      "first_speedup": 2.3926374472739793,
+      "warm_speedup": 2.867758576783368,
+      "peak_used_upper_bound_delta_MiB": 46.25355529785156,
+      "peak_used_upper_bound_delta_percent": 2.934119378071487,
+      "peak_reserved_upper_bound_delta_MiB": 68.0
+    }
+  ],
+  "profile_rows": [
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 41.19315795898437,
+      "whole_wall_ms_mean": 41.24459999875398,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 24.509534645080567,
+        "nn_path_exclusive": 8.497153091430665,
+        "radius_path_exclusive": 8.186470222473144
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 8.186470222473144,
+        "three_nn_including_adapter": 8.497153091430665,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 24.509534645080567
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          24.352223873138428,
+          24.684866905212402
+        ],
+        "nn_path_exclusive": [
+          8.495105743408203,
+          8.499202728271484
+        ],
+        "radius_path_exclusive": [
+          8.17561674118042,
+          8.19609546661377
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0025857735355586,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 30.599071884155272,
+      "whole_wall_ms_mean": 30.6520999984059,
+      "exclusive_component_ms_mean": {
+        "build": 2.58314208984375,
+        "cache_hit_path_exclusive": 0.06655998229980468,
+        "free": 0.006348896026611328,
+        "neural_sampling_and_remaining": 24.53617305755615,
+        "nn_kernel": 0.3117061614990234,
+        "nn_path_exclusive": 0.9084922790527343,
+        "radius_kernel": 1.699225616455078,
+        "radius_path_exclusive": 0.48742380142211916
+      },
+      "display_categories_ms_mean": {
+        "build": 2.58314208984375,
+        "radius_query_including_adapter": 2.1866494178771974,
+        "three_nn_including_adapter": 1.2201984405517576,
+        "cache_hit_path": 0.06655998229980468,
+        "free": 0.006348896026611328,
+        "other_neural_and_sampling": 24.53617305755615
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.3111677169799805,
+          2.8682241439819336
+        ],
+        "cache_hit_path_exclusive": [
+          0.0645132064819336,
+          0.06860637664794922
+        ],
+        "free": [
+          0.006142616271972656,
+          0.007167339324951172
+        ],
+        "neural_sampling_and_remaining": [
+          24.50118064880371,
+          24.567110061645508
+        ],
+        "nn_kernel": [
+          0.30412864685058594,
+          0.3266563415527344
+        ],
+        "nn_path_exclusive": [
+          0.9072608947753906,
+          0.9093112945556641
+        ],
+        "radius_kernel": [
+          1.686528205871582,
+          1.7233915328979492
+        ],
+        "radius_path_exclusive": [
+          0.4515810012817383,
+          0.5468177795410156
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 2,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 1
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9963401219315646,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 557056,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 35.32344970703125,
+      "whole_wall_ms_mean": 35.36846000060905,
+      "exclusive_component_ms_mean": {
+        "build": 2.9558465003967287,
+        "cache_hit_path_exclusive": 1.9401727676391602,
+        "free": 0.0061431884765625,
+        "neural_sampling_and_remaining": 26.41331729888916,
+        "nn_kernel": 0.33422012329101564,
+        "nn_path_exclusive": 1.1425949096679688,
+        "radius_kernel": 1.7754111289978027,
+        "radius_path_exclusive": 0.7557437896728516
+      },
+      "display_categories_ms_mean": {
+        "build": 2.9558465003967287,
+        "radius_query_including_adapter": 2.531154918670654,
+        "three_nn_including_adapter": 1.4768150329589844,
+        "cache_hit_path": 1.9401727676391602,
+        "free": 0.0061431884765625,
+        "other_neural_and_sampling": 26.41331729888916
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.403327465057373,
+          3.7396488189697266
+        ],
+        "cache_hit_path_exclusive": [
+          1.6458873748779297,
+          2.273310661315918
+        ],
+        "free": [
+          0.00614166259765625,
+          0.006145477294921875
+        ],
+        "neural_sampling_and_remaining": [
+          25.86156463623047,
+          27.04991912841797
+        ],
+        "nn_kernel": [
+          0.3296318054199219,
+          0.33907318115234375
+        ],
+        "nn_path_exclusive": [
+          1.0374069213867188,
+          1.2451210021972656
+        ],
+        "radius_kernel": [
+          1.760256290435791,
+          1.8042874336242676
+        ],
+        "radius_path_exclusive": [
+          0.6973457336425781,
+          0.829439640045166
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 1,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0329271806147673,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 1,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 21,
+        "snapshot_bytes": 301152,
+        "cache_bytes": 976640,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 37.66857681274414,
+      "whole_wall_ms_mean": 37.74230000053649,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 21.11807508468628,
+        "nn_path_exclusive": 8.50391082763672,
+        "radius_path_exclusive": 8.046590900421142
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 8.046590900421142,
+        "three_nn_including_adapter": 8.50391082763672,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 21.11807508468628
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          21.032419681549072,
+          21.228731155395508
+        ],
+        "nn_path_exclusive": [
+          8.496129989624023,
+          8.526849746704102
+        ],
+        "radius_path_exclusive": [
+          8.0343017578125,
+          8.066051483154297
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0000662501085522,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 27.622854232788086,
+      "whole_wall_ms_mean": 27.66399999964051,
+      "exclusive_component_ms_mean": {
+        "build": 2.7320316314697264,
+        "cache_hit_path_exclusive": 0.07147483825683594,
+        "free": 0.006143760681152344,
+        "neural_sampling_and_remaining": 21.37893180847168,
+        "nn_kernel": 0.30556182861328124,
+        "nn_path_exclusive": 0.920351791381836,
+        "radius_kernel": 1.7125309944152831,
+        "radius_path_exclusive": 0.49582757949829104
+      },
+      "display_categories_ms_mean": {
+        "build": 2.7320316314697264,
+        "radius_query_including_adapter": 2.208358573913574,
+        "three_nn_including_adapter": 1.2259136199951173,
+        "cache_hit_path": 0.07147483825683594,
+        "free": 0.006143760681152344,
+        "other_neural_and_sampling": 21.37893180847168
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.362367630004883,
+          3.059711456298828
+        ],
+        "cache_hit_path_exclusive": [
+          0.06963157653808594,
+          0.07372856140136719
+        ],
+        "free": [
+          0.005120754241943359,
+          0.007169246673583984
+        ],
+        "neural_sampling_and_remaining": [
+          21.087584972381592,
+          21.619426727294922
+        ],
+        "nn_kernel": [
+          0.3031044006347656,
+          0.3092479705810547
+        ],
+        "nn_path_exclusive": [
+          0.9093132019042969,
+          0.9471015930175781
+        ],
+        "radius_kernel": [
+          1.678335189819336,
+          1.7602553367614746
+        ],
+        "radius_path_exclusive": [
+          0.45465755462646484,
+          0.5498886108398438
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 2,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 1
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0124850863886417,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 557056,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_storage_3",
+      "size": "small",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 13114,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 30.690867233276368,
+      "whole_wall_ms_mean": 30.723659999057418,
+      "exclusive_component_ms_mean": {
+        "build": 2.392454147338867,
+        "cache_hit_path_exclusive": 1.5997442245483398,
+        "free": 0.006348800659179687,
+        "neural_sampling_and_remaining": 22.777548027038574,
+        "nn_kernel": 0.33450889587402344,
+        "nn_path_exclusive": 1.1341129302978517,
+        "radius_kernel": 1.7707006454467773,
+        "radius_path_exclusive": 0.6754495620727539
+      },
+      "display_categories_ms_mean": {
+        "build": 2.392454147338867,
+        "radius_query_including_adapter": 2.446150207519531,
+        "three_nn_including_adapter": 1.468621826171875,
+        "cache_hit_path": 1.5997442245483398,
+        "free": 0.006348800659179687,
+        "other_neural_and_sampling": 22.777548027038574
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.284543514251709,
+          2.6122241020202637
+        ],
+        "cache_hit_path_exclusive": [
+          1.471552848815918,
+          1.7274904251098633
+        ],
+        "free": [
+          0.0061435699462890625,
+          0.007167816162109375
+        ],
+        "neural_sampling_and_remaining": [
+          22.53375816345215,
+          22.86022424697876
+        ],
+        "nn_kernel": [
+          0.32595062255859375,
+          0.34960174560546875
+        ],
+        "nn_path_exclusive": [
+          1.1139869689941406,
+          1.1710376739501953
+        ],
+        "radius_kernel": [
+          1.7428474426269531,
+          1.796095848083496
+        ],
+        "radius_path_exclusive": [
+          0.6430721282958984,
+          0.710752010345459
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 1,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.011182597561954,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 1,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 21,
+        "snapshot_bytes": 301152,
+        "cache_bytes": 976640,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 194.63724365234376,
+      "whole_wall_ms_mean": 194.70584000009694,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 94.19340095520019,
+        "nn_path_exclusive": 75.06144866943359,
+        "radius_path_exclusive": 25.38239402770996
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 25.38239402770996,
+        "three_nn_including_adapter": 75.06144866943359,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 94.19340095520019
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          93.06155204772949,
+          96.29667854309082
+        ],
+        "nn_path_exclusive": [
+          72.76030731201172,
+          77.2413330078125
+        ],
+        "radius_path_exclusive": [
+          24.9300479888916,
+          26.160139083862305
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.023780323337329,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 100.75518951416015,
+      "whole_wall_ms_mean": 100.84541999967769,
+      "exclusive_component_ms_mean": {
+        "build": 2.956698989868164,
+        "cache_hit_path_exclusive": 0.07966766357421876,
+        "free": 0.004913711547851562,
+        "neural_sampling_and_remaining": 93.07484550476075,
+        "nn_kernel": 0.8427505493164062,
+        "nn_path_exclusive": 0.5924880981445313,
+        "radius_kernel": 2.8345993041992186,
+        "radius_path_exclusive": 0.36922569274902345
+      },
+      "display_categories_ms_mean": {
+        "build": 2.956698989868164,
+        "radius_query_including_adapter": 3.203824996948242,
+        "three_nn_including_adapter": 1.4352386474609375,
+        "cache_hit_path": 0.07966766357421876,
+        "free": 0.004913711547851562,
+        "other_neural_and_sampling": 93.07484550476075
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.6449928283691406,
+          3.6423683166503906
+        ],
+        "cache_hit_path_exclusive": [
+          0.07884597778320312,
+          0.08089828491210938
+        ],
+        "free": [
+          0.0040912628173828125,
+          0.006145477294921875
+        ],
+        "neural_sampling_and_remaining": [
+          91.54387855529785,
+          95.01556015014648
+        ],
+        "nn_kernel": [
+          0.8171539306640625,
+          0.8806381225585938
+        ],
+        "nn_path_exclusive": [
+          0.5816268920898438,
+          0.6062164306640625
+        ],
+        "radius_kernel": [
+          2.796539306640625,
+          2.892740249633789
+        ],
+        "radius_path_exclusive": [
+          0.35712432861328125,
+          0.38104248046875
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0114844896911557,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 2597120,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 105.22106323242187,
+      "whole_wall_ms_mean": 105.26886000006925,
+      "exclusive_component_ms_mean": {
+        "build": 3.1796085357666017,
+        "cache_hit_path_exclusive": 1.8865440368652344,
+        "free": 0.00532379150390625,
+        "neural_sampling_and_remaining": 94.47244071960449,
+        "nn_kernel": 0.916107177734375,
+        "nn_path_exclusive": 0.8892059326171875,
+        "radius_kernel": 2.9291660308837892,
+        "radius_path_exclusive": 0.9426670074462891
+      },
+      "display_categories_ms_mean": {
+        "build": 3.1796085357666017,
+        "radius_query_including_adapter": 3.8718330383300783,
+        "three_nn_including_adapter": 1.8053131103515625,
+        "cache_hit_path": 1.8865440368652344,
+        "free": 0.00532379150390625,
+        "other_neural_and_sampling": 94.47244071960449
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.648000717163086,
+          4.1920318603515625
+        ],
+        "cache_hit_path_exclusive": [
+          1.8129920959472656,
+          1.9837608337402344
+        ],
+        "free": [
+          0.00408935546875,
+          0.0061492919921875
+        ],
+        "neural_sampling_and_remaining": [
+          93.05069923400879,
+          95.89595603942871
+        ],
+        "nn_kernel": [
+          0.889984130859375,
+          0.940185546875
+        ],
+        "nn_path_exclusive": [
+          0.8383712768554688,
+          1.0193557739257812
+        ],
+        "radius_kernel": [
+          2.8379898071289062,
+          2.9799652099609375
+        ],
+        "radius_path_exclusive": [
+          0.7797355651855469,
+          1.2389793395996094
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0302313134467245,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 3,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 25,
+        "snapshot_bytes": 1357884,
+        "cache_bytes": 4552832,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 205.7459686279297,
+      "whole_wall_ms_mean": 205.83482000147342,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 93.8477767944336,
+        "nn_path_exclusive": 84.20044555664063,
+        "radius_path_exclusive": 27.69774627685547
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 27.69774627685547,
+        "three_nn_including_adapter": 84.20044555664063,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 93.8477767944336
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          93.14087295532227,
+          95.71626281738281
+        ],
+        "nn_path_exclusive": [
+          82.59686279296875,
+          86.06822204589844
+        ],
+        "radius_path_exclusive": [
+          27.289592742919922,
+          28.826553344726562
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0142173751554473,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 102.12599639892578,
+      "whole_wall_ms_mean": 102.19692000027862,
+      "exclusive_component_ms_mean": {
+        "build": 3.182329559326172,
+        "cache_hit_path_exclusive": 0.06716690063476563,
+        "free": 0.0059417724609375,
+        "neural_sampling_and_remaining": 93.69399719238281,
+        "nn_kernel": 0.9392135620117188,
+        "nn_path_exclusive": 0.6631423950195312,
+        "radius_kernel": 3.174604034423828,
+        "radius_path_exclusive": 0.3996009826660156
+      },
+      "display_categories_ms_mean": {
+        "build": 3.182329559326172,
+        "radius_query_including_adapter": 3.574205017089844,
+        "three_nn_including_adapter": 1.60235595703125,
+        "cache_hit_path": 0.06716690063476563,
+        "free": 0.0059417724609375,
+        "other_neural_and_sampling": 93.69399719238281
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.760547637939453,
+          4.128765106201172
+        ],
+        "cache_hit_path_exclusive": [
+          0.0644989013671875,
+          0.068603515625
+        ],
+        "free": [
+          0.005123138427734375,
+          0.0061492919921875
+        ],
+        "neural_sampling_and_remaining": [
+          92.58772277832031,
+          94.83749771118164
+        ],
+        "nn_kernel": [
+          0.9021453857421875,
+          0.9635848999023438
+        ],
+        "nn_path_exclusive": [
+          0.64306640625,
+          0.6748199462890625
+        ],
+        "radius_kernel": [
+          3.0494728088378906,
+          3.2849884033203125
+        ],
+        "radius_path_exclusive": [
+          0.3698234558105469,
+          0.5007400512695312
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0309500759464754,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 2597120,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_office_23",
+      "size": "median",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 61117,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 106.0303741455078,
+      "whole_wall_ms_mean": 106.1147999993409,
+      "exclusive_component_ms_mean": {
+        "build": 3.2962127685546876,
+        "cache_hit_path_exclusive": 1.8941375732421875,
+        "free": 0.0057373046875,
+        "neural_sampling_and_remaining": 94.74333343505859,
+        "nn_kernel": 0.9954788208007812,
+        "nn_path_exclusive": 1.0091033935546876,
+        "radius_kernel": 3.2379196166992186,
+        "radius_path_exclusive": 0.8484512329101562
+      },
+      "display_categories_ms_mean": {
+        "build": 3.2962127685546876,
+        "radius_query_including_adapter": 4.0863708496093745,
+        "three_nn_including_adapter": 2.0045822143554686,
+        "cache_hit_path": 1.8941375732421875,
+        "free": 0.0057373046875,
+        "other_neural_and_sampling": 94.74333343505859
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.7668495178222656,
+          3.9750099182128906
+        ],
+        "cache_hit_path_exclusive": [
+          1.6294059753417969,
+          2.180217742919922
+        ],
+        "free": [
+          0.00511932373046875,
+          0.0061492919921875
+        ],
+        "neural_sampling_and_remaining": [
+          93.16570663452148,
+          96.16801071166992
+        ],
+        "nn_kernel": [
+          0.9804458618164062,
+          1.0130233764648438
+        ],
+        "nn_path_exclusive": [
+          0.948150634765625,
+          1.198699951171875
+        ],
+        "radius_kernel": [
+          3.1793594360351562,
+          3.3233261108398438
+        ],
+        "radius_path_exclusive": [
+          0.7443885803222656,
+          0.9637489318847656
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0043169443326285,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 3,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 25,
+        "snapshot_bytes": 1357884,
+        "cache_bytes": 4552832,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 1550.800244140625,
+      "whole_wall_ms_mean": 1550.920639999822,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 523.2564575195313,
+        "nn_path_exclusive": 871.1764404296875,
+        "radius_path_exclusive": 156.36734619140626
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 156.36734619140626,
+        "three_nn_including_adapter": 871.1764404296875,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 523.2564575195313
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          515.3756408691406,
+          533.1723937988281
+        ],
+        "nn_path_exclusive": [
+          870.5413818359375,
+          872.0568237304688
+        ],
+        "radius_path_exclusive": [
+          155.34075927734375,
+          157.46044921875
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9963016062167274,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 529.562841796875,
+      "whole_wall_ms_mean": 529.6907399999327,
+      "exclusive_component_ms_mean": {
+        "build": 3.731988525390625,
+        "cache_hit_path_exclusive": 0.1728759765625,
+        "free": 0.004095458984375,
+        "neural_sampling_and_remaining": 518.4654418945313,
+        "nn_kernel": 2.22169189453125,
+        "nn_path_exclusive": 0.01309814453125,
+        "radius_kernel": 4.802069091796875,
+        "radius_path_exclusive": 0.151580810546875
+      },
+      "display_categories_ms_mean": {
+        "build": 3.731988525390625,
+        "radius_query_including_adapter": 4.95364990234375,
+        "three_nn_including_adapter": 2.2347900390624997,
+        "cache_hit_path": 0.1728759765625,
+        "free": 0.004095458984375,
+        "other_neural_and_sampling": 518.4654418945313
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.527557373046875,
+          4.084716796875
+        ],
+        "cache_hit_path_exclusive": [
+          0.16693115234375,
+          0.181304931640625
+        ],
+        "free": [
+          0.004058837890625,
+          0.004119873046875
+        ],
+        "neural_sampling_and_remaining": [
+          516.2301940917969,
+          521.1549682617188
+        ],
+        "nn_kernel": [
+          2.20367431640625,
+          2.25079345703125
+        ],
+        "nn_path_exclusive": [
+          0.01025390625,
+          0.015380859375
+        ],
+        "radius_kernel": [
+          4.727569580078125,
+          4.916229248046875
+        ],
+        "radius_path_exclusive": [
+          0.131103515625,
+          0.177337646484375
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0051179870331597,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 12319488,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 536.1061401367188,
+      "whole_wall_ms_mean": 536.2131400004728,
+      "exclusive_component_ms_mean": {
+        "build": 4.070587158203125,
+        "cache_hit_path_exclusive": 2.47515869140625,
+        "free": 0.00404052734375,
+        "neural_sampling_and_remaining": 520.3847900390625,
+        "nn_kernel": 2.31251220703125,
+        "nn_path_exclusive": 0.54710693359375,
+        "radius_kernel": 5.056475830078125,
+        "radius_path_exclusive": 1.25546875
+      },
+      "display_categories_ms_mean": {
+        "build": 4.070587158203125,
+        "radius_query_including_adapter": 6.311944580078125,
+        "three_nn_including_adapter": 2.859619140625,
+        "cache_hit_path": 2.47515869140625,
+        "free": 0.00404052734375,
+        "other_neural_and_sampling": 520.3847900390625
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.697509765625,
+          4.660858154296875
+        ],
+        "cache_hit_path_exclusive": [
+          2.162567138671875,
+          2.737396240234375
+        ],
+        "free": [
+          0.0040283203125,
+          0.00408935546875
+        ],
+        "neural_sampling_and_remaining": [
+          515.6177978515625,
+          523.5936889648438
+        ],
+        "nn_kernel": [
+          2.25262451171875,
+          2.34625244140625
+        ],
+        "nn_path_exclusive": [
+          0.4149169921875,
+          0.6727294921875
+        ],
+        "radius_kernel": [
+          4.90484619140625,
+          5.177703857421875
+        ],
+        "radius_path_exclusive": [
+          1.15576171875,
+          1.441497802734375
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9992148447939021,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 7,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 31,
+        "snapshot_bytes": 6372660,
+        "cache_bytes": 21595392,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 1591.8712890625,
+      "whole_wall_ms_mean": 1591.988919999858,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 564.5883605957031,
+        "nn_path_exclusive": 873.56640625,
+        "radius_path_exclusive": 153.71652221679688
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 153.71652221679688,
+        "three_nn_including_adapter": 873.56640625,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 564.5883605957031
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          542.5712890625,
+          604.6875
+        ],
+        "nn_path_exclusive": [
+          870.35595703125,
+          883.4232788085938
+        ],
+        "radius_path_exclusive": [
+          147.479736328125,
+          162.94281005859375
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9841550754539852,
+      "counters": {}
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 562.7084838867188,
+      "whole_wall_ms_mean": 562.8845600003842,
+      "exclusive_component_ms_mean": {
+        "build": 4.226214599609375,
+        "cache_hit_path_exclusive": 0.09420166015625,
+        "free": 0.00447998046875,
+        "neural_sampling_and_remaining": 550.8384094238281,
+        "nn_kernel": 2.236376953125,
+        "nn_path_exclusive": 0.01392822265625,
+        "radius_kernel": 5.082220458984375,
+        "radius_path_exclusive": 0.212652587890625
+      },
+      "display_categories_ms_mean": {
+        "build": 4.226214599609375,
+        "radius_query_including_adapter": 5.294873046875001,
+        "three_nn_including_adapter": 2.25030517578125,
+        "cache_hit_path": 0.09420166015625,
+        "free": 0.00447998046875,
+        "other_neural_and_sampling": 550.8384094238281
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.628814697265625,
+          4.787200927734375
+        ],
+        "cache_hit_path_exclusive": [
+          0.09112548828125,
+          0.10028076171875
+        ],
+        "free": [
+          0.004058837890625,
+          0.005096435546875
+        ],
+        "neural_sampling_and_remaining": [
+          543.5442199707031,
+          561.0886840820312
+        ],
+        "nn_kernel": [
+          2.2066650390625,
+          2.25787353515625
+        ],
+        "nn_path_exclusive": [
+          0.01220703125,
+          0.0184326171875
+        ],
+        "radius_kernel": [
+          4.935882568359375,
+          5.19671630859375
+        ],
+        "radius_path_exclusive": [
+          0.122344970703125,
+          0.352294921875
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9492568567418106,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 12319488,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "s3dis",
+      "scene": "Area_5_hallway_2",
+      "size": "large",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 289873,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 583.5377075195313,
+      "whole_wall_ms_mean": 583.687079999072,
+      "exclusive_component_ms_mean": {
+        "build": 4.5172119140625,
+        "cache_hit_path_exclusive": 3.620751953125,
+        "free": 0.0051025390625,
+        "neural_sampling_and_remaining": 565.02001953125,
+        "nn_kernel": 2.4276123046875,
+        "nn_path_exclusive": 0.73533935546875,
+        "radius_kernel": 5.41005859375,
+        "radius_path_exclusive": 1.801611328125
+      },
+      "display_categories_ms_mean": {
+        "build": 4.5172119140625,
+        "radius_query_including_adapter": 7.211669921875,
+        "three_nn_including_adapter": 3.16295166015625,
+        "cache_hit_path": 3.620751953125,
+        "free": 0.0051025390625,
+        "other_neural_and_sampling": 565.02001953125
+      },
+      "component_ranges_ms": {
+        "build": [
+          4.06622314453125,
+          4.700042724609375
+        ],
+        "cache_hit_path_exclusive": [
+          3.105560302734375,
+          4.1357421875
+        ],
+        "free": [
+          0.0030517578125,
+          0.01019287109375
+        ],
+        "neural_sampling_and_remaining": [
+          548.0842895507812,
+          602.5329895019531
+        ],
+        "nn_kernel": [
+          2.3013916015625,
+          2.59429931640625
+        ],
+        "nn_path_exclusive": [
+          0.4359130859375,
+          1.21087646484375
+        ],
+        "radius_kernel": [
+          5.270599365234375,
+          5.58697509765625
+        ],
+        "radius_path_exclusive": [
+          1.329345703125,
+          2.222930908203125
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9671796541576481,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 7,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 31,
+        "snapshot_bytes": 6372660,
+        "cache_bytes": 21595392,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 78.74407196044922,
+      "whole_wall_ms_mean": 78.82734000158962,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 43.901944923400876,
+        "nn_path_exclusive": 19.731864166259765,
+        "radius_path_exclusive": 15.110262870788574
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 15.110262870788574,
+        "three_nn_including_adapter": 19.731864166259765,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 43.901944923400876
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          43.77565574645996,
+          44.02724361419678
+        ],
+        "nn_path_exclusive": [
+          19.72735595703125,
+          19.735549926757812
+        ],
+        "radius_path_exclusive": [
+          15.100922584533691,
+          15.121305465698242
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9980360028331078,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 50.911583709716794,
+      "whole_wall_ms_mean": 51.01357999956235,
+      "exclusive_component_ms_mean": {
+        "build": 3.064204788208008,
+        "cache_hit_path_exclusive": 0.07331695556640624,
+        "free": 0.006552886962890625,
+        "neural_sampling_and_remaining": 44.15502853393555,
+        "nn_kernel": 0.6615043640136719,
+        "nn_path_exclusive": 0.39505996704101565,
+        "radius_kernel": 2.239078903198242,
+        "radius_path_exclusive": 0.3168373107910156
+      },
+      "display_categories_ms_mean": {
+        "build": 3.064204788208008,
+        "radius_query_including_adapter": 2.5559162139892577,
+        "three_nn_including_adapter": 1.0565643310546875,
+        "cache_hit_path": 0.07331695556640624,
+        "free": 0.006552886962890625,
+        "other_neural_and_sampling": 44.15502853393555
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.766847610473633,
+          3.378176689147949
+        ],
+        "cache_hit_path_exclusive": [
+          0.07168006896972656,
+          0.075775146484375
+        ],
+        "free": [
+          0.006142616271972656,
+          0.008189201354980469
+        ],
+        "neural_sampling_and_remaining": [
+          43.783456802368164,
+          44.570058822631836
+        ],
+        "nn_kernel": [
+          0.6451187133789062,
+          0.668670654296875
+        ],
+        "nn_path_exclusive": [
+          0.3942375183105469,
+          0.3952674865722656
+        ],
+        "radius_kernel": [
+          2.221057891845703,
+          2.251774787902832
+        ],
+        "radius_path_exclusive": [
+          0.2775707244873047,
+          0.4085712432861328
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0045649717671195,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 997376,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 55.73496322631836,
+      "whole_wall_ms_mean": 55.79241999948863,
+      "exclusive_component_ms_mean": {
+        "build": 2.9906946182250977,
+        "cache_hit_path_exclusive": 2.059758758544922,
+        "free": 0.00614471435546875,
+        "neural_sampling_and_remaining": 45.95203552246094,
+        "nn_kernel": 0.7502006530761719,
+        "nn_path_exclusive": 0.8531333923339843,
+        "radius_kernel": 2.3311752319335937,
+        "radius_path_exclusive": 0.7918203353881836
+      },
+      "display_categories_ms_mean": {
+        "build": 2.9906946182250977,
+        "radius_query_including_adapter": 3.1229955673217775,
+        "three_nn_including_adapter": 1.6033340454101563,
+        "cache_hit_path": 2.059758758544922,
+        "free": 0.00614471435546875,
+        "other_neural_and_sampling": 45.95203552246094
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.7617292404174805,
+          3.171328544616699
+        ],
+        "cache_hit_path_exclusive": [
+          1.714181900024414,
+          3.009532928466797
+        ],
+        "free": [
+          0.00614166259765625,
+          0.0061492919921875
+        ],
+        "neural_sampling_and_remaining": [
+          44.93327617645264,
+          48.75552177429199
+        ],
+        "nn_kernel": [
+          0.7018890380859375,
+          0.7920951843261719
+        ],
+        "nn_path_exclusive": [
+          0.6476821899414062,
+          1.1994552612304688
+        ],
+        "radius_kernel": [
+          2.2636489868164062,
+          2.3809614181518555
+        ],
+        "radius_path_exclusive": [
+          0.6611194610595703,
+          0.9531831741333008
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9677502575411349,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 3,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 25,
+        "snapshot_bytes": 521508,
+        "cache_bytes": 1748480,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 71.27193756103516,
+      "whole_wall_ms_mean": 71.37095999933081,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 37.25261116027832,
+        "nn_path_exclusive": 19.745177459716796,
+        "radius_path_exclusive": 14.274148941040039
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 14.274148941040039,
+        "three_nn_including_adapter": 19.745177459716796,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 37.25261116027832
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          37.139976501464844,
+          37.53767013549805
+        ],
+        "nn_path_exclusive": [
+          19.741695404052734,
+          19.74988555908203
+        ],
+        "radius_path_exclusive": [
+          14.266365051269531,
+          14.292984008789062
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9968627637359593,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 44.44093475341797,
+      "whole_wall_ms_mean": 44.587860001047375,
+      "exclusive_component_ms_mean": {
+        "build": 3.259597396850586,
+        "cache_hit_path_exclusive": 0.07987213134765625,
+        "free": 0.006757926940917969,
+        "neural_sampling_and_remaining": 37.47282543182373,
+        "nn_kernel": 0.6731781005859375,
+        "nn_path_exclusive": 0.40222854614257814,
+        "radius_kernel": 2.2349826812744142,
+        "radius_path_exclusive": 0.3114925384521484
+      },
+      "display_categories_ms_mean": {
+        "build": 3.259597396850586,
+        "radius_query_including_adapter": 2.5464752197265628,
+        "three_nn_including_adapter": 1.0754066467285157,
+        "cache_hit_path": 0.07987213134765625,
+        "free": 0.006757926940917969,
+        "other_neural_and_sampling": 37.47282543182373
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.973696708679199,
+          3.6259841918945312
+        ],
+        "cache_hit_path_exclusive": [
+          0.07372665405273438,
+          0.09113693237304688
+        ],
+        "free": [
+          0.006142616271972656,
+          0.007168769836425781
+        ],
+        "neural_sampling_and_remaining": [
+          37.161895751953125,
+          38.26124382019043
+        ],
+        "nn_kernel": [
+          0.6655998229980469,
+          0.6789131164550781
+        ],
+        "nn_path_exclusive": [
+          0.4003868103027344,
+          0.4034576416015625
+        ],
+        "radius_kernel": [
+          2.2005748748779297,
+          2.2958078384399414
+        ],
+        "radius_path_exclusive": [
+          0.2856597900390625,
+          0.3758096694946289
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9851514560412122,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 997376,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0702_02_inst_nostuff",
+      "size": "small",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 23474,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 48.8925178527832,
+      "whole_wall_ms_mean": 48.953939999773866,
+      "exclusive_component_ms_mean": {
+        "build": 2.8286916732788088,
+        "cache_hit_path_exclusive": 1.8333404541015625,
+        "free": 0.005735015869140625,
+        "neural_sampling_and_remaining": 39.63047466278076,
+        "nn_kernel": 0.7151618957519531,
+        "nn_path_exclusive": 0.7507896423339844,
+        "radius_kernel": 2.335584259033203,
+        "radius_path_exclusive": 0.7927402496337891
+      },
+      "display_categories_ms_mean": {
+        "build": 2.8286916732788088,
+        "radius_query_including_adapter": 3.128324508666992,
+        "three_nn_including_adapter": 1.4659515380859376,
+        "cache_hit_path": 1.8333404541015625,
+        "free": 0.005735015869140625,
+        "other_neural_and_sampling": 39.63047466278076
+      },
+      "component_ranges_ms": {
+        "build": [
+          2.674689292907715,
+          3.048417091369629
+        ],
+        "cache_hit_path_exclusive": [
+          1.4654731750488281,
+          2.1228103637695312
+        ],
+        "free": [
+          0.00511932373046875,
+          0.006145477294921875
+        ],
+        "neural_sampling_and_remaining": [
+          38.78047275543213,
+          40.9605188369751
+        ],
+        "nn_kernel": [
+          0.6954879760742188,
+          0.7533721923828125
+        ],
+        "nn_path_exclusive": [
+          0.6709136962890625,
+          1.0324478149414062
+        ],
+        "radius_kernel": [
+          2.269664764404297,
+          2.3637771606445312
+        ],
+        "radius_path_exclusive": [
+          0.7191619873046875,
+          0.9277429580688477
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 3,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 2,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9921461384116932,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 3,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 25,
+        "snapshot_bytes": 521508,
+        "cache_bytes": 1748480,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 539.15078125,
+      "whole_wall_ms_mean": 539.3180800005211,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 222.62011260986327,
+        "nn_path_exclusive": 251.12351684570314,
+        "radius_path_exclusive": 65.40715179443359
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 65.40715179443359,
+        "three_nn_including_adapter": 251.12351684570314,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 222.62011260986327
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          206.3047637939453,
+          234.51631927490234
+        ],
+        "nn_path_exclusive": [
+          234.61172485351562,
+          274.03369140625
+        ],
+        "radius_path_exclusive": [
+          61.972503662109375,
+          70.04874420166016
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0903117836583507,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 219.32266845703126,
+      "whole_wall_ms_mean": 219.49604000037652,
+      "exclusive_component_ms_mean": {
+        "build": 4.589155578613282,
+        "cache_hit_path_exclusive": 0.11222686767578124,
+        "free": 0.00594482421875,
+        "neural_sampling_and_remaining": 208.04947509765626,
+        "nn_kernel": 1.878424072265625,
+        "nn_path_exclusive": 0.2510955810546875,
+        "radius_kernel": 4.057891845703125,
+        "radius_path_exclusive": 0.37845458984375
+      },
+      "display_categories_ms_mean": {
+        "build": 4.589155578613282,
+        "radius_query_including_adapter": 4.436346435546875,
+        "three_nn_including_adapter": 2.1295196533203122,
+        "cache_hit_path": 0.11222686767578124,
+        "free": 0.00594482421875,
+        "other_neural_and_sampling": 208.04947509765626
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.9239654541015625,
+          5.266426086425781
+        ],
+        "cache_hit_path_exclusive": [
+          0.105499267578125,
+          0.1269683837890625
+        ],
+        "free": [
+          0.005126953125,
+          0.00615692138671875
+        ],
+        "neural_sampling_and_remaining": [
+          193.08840942382812,
+          228.22178649902344
+        ],
+        "nn_kernel": [
+          1.6916351318359375,
+          2.079742431640625
+        ],
+        "nn_path_exclusive": [
+          0.2252960205078125,
+          0.2785491943359375
+        ],
+        "radius_kernel": [
+          3.6362228393554688,
+          4.577186584472656
+        ],
+        "radius_path_exclusive": [
+          0.28551483154296875,
+          0.563201904296875
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0972279248504582,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 229.97066650390624,
+      "whole_wall_ms_mean": 230.10553999920376,
+      "exclusive_component_ms_mean": {
+        "build": 4.183441162109375,
+        "cache_hit_path_exclusive": 3.7379119873046873,
+        "free": 0.0067535400390625,
+        "neural_sampling_and_remaining": 213.62281799316406,
+        "nn_kernel": 1.9724639892578124,
+        "nn_path_exclusive": 0.7767791748046875,
+        "radius_kernel": 4.246562194824219,
+        "radius_path_exclusive": 1.4239364624023438
+      },
+      "display_categories_ms_mean": {
+        "build": 4.183441162109375,
+        "radius_query_including_adapter": 5.670498657226563,
+        "three_nn_including_adapter": 2.7492431640625,
+        "cache_hit_path": 3.7379119873046873,
+        "free": 0.0067535400390625,
+        "other_neural_and_sampling": 213.62281799316406
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.9249954223632812,
+          4.3663330078125
+        ],
+        "cache_hit_path_exclusive": [
+          2.7637481689453125,
+          5.5235443115234375
+        ],
+        "free": [
+          0.006134033203125,
+          0.0092010498046875
+        ],
+        "neural_sampling_and_remaining": [
+          201.45972442626953,
+          226.19319915771484
+        ],
+        "nn_kernel": [
+          1.84320068359375,
+          2.1571807861328125
+        ],
+        "nn_path_exclusive": [
+          0.6381072998046875,
+          0.944732666015625
+        ],
+        "radius_kernel": [
+          4.0122833251953125,
+          4.530364990234375
+        ],
+        "radius_path_exclusive": [
+          1.1179428100585938,
+          1.6402435302734375
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.1184889272729395,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 557.4668334960937,
+      "whole_wall_ms_mean": 557.5782999992953,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 217.21683502197266,
+        "nn_path_exclusive": 270.41013793945314,
+        "radius_path_exclusive": 69.83986053466796
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 69.83986053466796,
+        "three_nn_including_adapter": 270.41013793945314,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 217.21683502197266
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          206.0410919189453,
+          223.1418228149414
+        ],
+        "nn_path_exclusive": [
+          251.95315551757812,
+          280.28106689453125
+        ],
+        "radius_path_exclusive": [
+          65.36708068847656,
+          72.71114349365234
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0534105100126256,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 216.85373229980468,
+      "whole_wall_ms_mean": 216.9826399993326,
+      "exclusive_component_ms_mean": {
+        "build": 4.804574584960937,
+        "cache_hit_path_exclusive": 0.08212127685546874,
+        "free": 0.00573272705078125,
+        "neural_sampling_and_remaining": 205.09514312744142,
+        "nn_kernel": 1.9726318359375,
+        "nn_path_exclusive": 0.269927978515625,
+        "radius_kernel": 4.289302062988281,
+        "radius_path_exclusive": 0.3342987060546875
+      },
+      "display_categories_ms_mean": {
+        "build": 4.804574584960937,
+        "radius_query_including_adapter": 4.623600769042969,
+        "three_nn_including_adapter": 2.242559814453125,
+        "cache_hit_path": 0.08212127685546874,
+        "free": 0.00573272705078125,
+        "other_neural_and_sampling": 205.09514312744142
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.9854049682617188,
+          5.43011474609375
+        ],
+        "cache_hit_path_exclusive": [
+          0.078857421875,
+          0.08599853515625
+        ],
+        "free": [
+          0.00511932373046875,
+          0.0071563720703125
+        ],
+        "neural_sampling_and_remaining": [
+          197.92578125,
+          210.23273468017578
+        ],
+        "nn_kernel": [
+          1.89337158203125,
+          2.07257080078125
+        ],
+        "nn_path_exclusive": [
+          0.256011962890625,
+          0.295928955078125
+        ],
+        "radius_kernel": [
+          4.14923095703125,
+          4.415489196777344
+        ],
+        "radius_path_exclusive": [
+          0.23654937744140625,
+          0.42205810546875
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.037621127271078,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 4283904,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0697_01_inst_nostuff",
+      "size": "median",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 100801,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 228.05264587402343,
+      "whole_wall_ms_mean": 228.18864000000758,
+      "exclusive_component_ms_mean": {
+        "build": 4.807832336425781,
+        "cache_hit_path_exclusive": 2.698382568359375,
+        "free": 0.0063507080078125,
+        "neural_sampling_and_remaining": 211.46513824462892,
+        "nn_kernel": 2.1674041748046875,
+        "nn_path_exclusive": 0.9172943115234375,
+        "radius_kernel": 4.554438781738281,
+        "radius_path_exclusive": 1.4358047485351562
+      },
+      "display_categories_ms_mean": {
+        "build": 4.807832336425781,
+        "radius_query_including_adapter": 5.990243530273437,
+        "three_nn_including_adapter": 3.084698486328125,
+        "cache_hit_path": 2.698382568359375,
+        "free": 0.0063507080078125,
+        "other_neural_and_sampling": 211.46513824462892
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.8553619384765625,
+          6.00677490234375
+        ],
+        "cache_hit_path_exclusive": [
+          2.238555908203125,
+          2.9298248291015625
+        ],
+        "free": [
+          0.006134033203125,
+          0.007171630859375
+        ],
+        "neural_sampling_and_remaining": [
+          206.17169952392578,
+          218.85095977783203
+        ],
+        "nn_kernel": [
+          2.069793701171875,
+          2.3262176513671875
+        ],
+        "nn_path_exclusive": [
+          0.6938629150390625,
+          1.5260772705078125
+        ],
+        "radius_kernel": [
+          4.407127380371094,
+          4.7575836181640625
+        ],
+        "radius_path_exclusive": [
+          0.950103759765625,
+          1.789215087890625
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 4,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_path": 4,
+        "nn_kernel": 3,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0036816994186828,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 5,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 29,
+        "snapshot_bytes": 2220744,
+        "cache_bytes": 7509504,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "flash",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 1636.459375,
+      "whole_wall_ms_mean": 1636.6129400012142,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 538.9151000976562,
+        "nn_path_exclusive": 918.58037109375,
+        "radius_path_exclusive": 178.96390380859376
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 178.96390380859376,
+        "three_nn_including_adapter": 918.58037109375,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 538.9151000976562
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          534.5400390625,
+          542.7877502441406
+        ],
+        "nn_path_exclusive": [
+          917.1189575195312,
+          920.3814697265625
+        ],
+        "radius_path_exclusive": [
+          175.36700439453125,
+          181.61654663085938
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0090770289937219,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "frozen",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 548.5849975585937,
+      "whole_wall_ms_mean": 548.7618200000725,
+      "exclusive_component_ms_mean": {
+        "build": 4.325140380859375,
+        "cache_hit_path_exclusive": 0.162274169921875,
+        "free": 0.00494384765625,
+        "neural_sampling_and_remaining": 536.1270935058594,
+        "nn_kernel": 2.51787109375,
+        "nn_path_exclusive": 0.01240234375,
+        "radius_kernel": 5.232806396484375,
+        "radius_path_exclusive": 0.2024658203125
+      },
+      "display_categories_ms_mean": {
+        "build": 4.325140380859375,
+        "radius_query_including_adapter": 5.435272216796875,
+        "three_nn_including_adapter": 2.5302734375,
+        "cache_hit_path": 0.162274169921875,
+        "free": 0.00494384765625,
+        "other_neural_and_sampling": 536.1270935058594
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.97406005859375,
+          4.833282470703125
+        ],
+        "cache_hit_path_exclusive": [
+          0.159759521484375,
+          0.166015625
+        ],
+        "free": [
+          0.004119873046875,
+          0.006134033203125
+        ],
+        "neural_sampling_and_remaining": [
+          534.2037353515625,
+          540.0652465820312
+        ],
+        "nn_kernel": [
+          2.4515380859375,
+          2.59490966796875
+        ],
+        "nn_path_exclusive": [
+          0.01007080078125,
+          0.01336669921875
+        ],
+        "radius_kernel": [
+          5.15264892578125,
+          5.330810546875
+        ],
+        "radius_path_exclusive": [
+          0.13043212890625,
+          0.2611083984375
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.005097905497003,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 12659072,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointnext",
+      "method": "session",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 557.4916259765625,
+      "whole_wall_ms_mean": 557.6437200004875,
+      "exclusive_component_ms_mean": {
+        "build": 4.061700439453125,
+        "cache_hit_path_exclusive": 3.935662841796875,
+        "free": 0.004931640625,
+        "neural_sampling_and_remaining": 539.2093078613282,
+        "nn_kernel": 2.72119140625,
+        "nn_path_exclusive": 0.63956298828125,
+        "radius_kernel": 5.4783935546875,
+        "radius_path_exclusive": 1.440875244140625
+      },
+      "display_categories_ms_mean": {
+        "build": 4.061700439453125,
+        "radius_query_including_adapter": 6.919268798828125,
+        "three_nn_including_adapter": 3.36075439453125,
+        "cache_hit_path": 3.935662841796875,
+        "free": 0.004931640625,
+        "other_neural_and_sampling": 539.2093078613282
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.761932373046875,
+          4.768524169921875
+        ],
+        "cache_hit_path_exclusive": [
+          2.84246826171875,
+          5.5042724609375
+        ],
+        "free": [
+          0.00408935546875,
+          0.0062255859375
+        ],
+        "neural_sampling_and_remaining": [
+          535.9123229980469,
+          543.2407531738281
+        ],
+        "nn_kernel": [
+          2.56939697265625,
+          2.8177490234375
+        ],
+        "nn_path_exclusive": [
+          0.52740478515625,
+          0.77813720703125
+        ],
+        "radius_kernel": [
+          5.364044189453125,
+          5.622802734375
+        ],
+        "radius_path_exclusive": [
+          1.16314697265625,
+          1.673431396484375
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 1.0066414045253944,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 7,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 31,
+        "snapshot_bytes": 6548364,
+        "cache_bytes": 22190720,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "flash",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 1655.825,
+      "whole_wall_ms_mean": 1656.0370399995008,
+      "exclusive_component_ms_mean": {
+        "neural_sampling_and_remaining": 561.0604248046875,
+        "nn_path_exclusive": 917.6868896484375,
+        "radius_path_exclusive": 177.077685546875
+      },
+      "display_categories_ms_mean": {
+        "build": 0,
+        "radius_query_including_adapter": 177.077685546875,
+        "three_nn_including_adapter": 917.6868896484375,
+        "cache_hit_path": 0,
+        "free": 0,
+        "other_neural_and_sampling": 561.0604248046875
+      },
+      "component_ranges_ms": {
+        "neural_sampling_and_remaining": [
+          560.0309143066406,
+          563.5054321289062
+        ],
+        "nn_path_exclusive": [
+          917.05859375,
+          918.7492065429688
+        ],
+        "radius_path_exclusive": [
+          172.86654663085938,
+          182.4051513671875
+        ]
+      },
+      "counts": {
+        "radius_path": 14,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.99781472947224,
+      "counters": {}
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "frozen",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 572.0776977539062,
+      "whole_wall_ms_mean": 572.3059200005082,
+      "exclusive_component_ms_mean": {
+        "build": 4.994427490234375,
+        "cache_hit_path_exclusive": 0.097930908203125,
+        "free": 0.00506591796875,
+        "neural_sampling_and_remaining": 558.9406494140625,
+        "nn_kernel": 2.49161376953125,
+        "nn_path_exclusive": 0.0134765625,
+        "radius_kernel": 5.251641845703125,
+        "radius_path_exclusive": 0.282891845703125
+      },
+      "display_categories_ms_mean": {
+        "build": 4.994427490234375,
+        "radius_query_including_adapter": 5.534533691406249,
+        "three_nn_including_adapter": 2.50509033203125,
+        "cache_hit_path": 0.097930908203125,
+        "free": 0.00506591796875,
+        "other_neural_and_sampling": 558.9406494140625
+      },
+      "component_ranges_ms": {
+        "build": [
+          4.20556640625,
+          6.723602294921875
+        ],
+        "cache_hit_path_exclusive": [
+          0.09429931640625,
+          0.09954833984375
+        ],
+        "free": [
+          0.004058837890625,
+          0.006011962890625
+        ],
+        "neural_sampling_and_remaining": [
+          558.0638122558594,
+          561.3912048339844
+        ],
+        "nn_kernel": [
+          2.4453125,
+          2.6480712890625
+        ],
+        "nn_path_exclusive": [
+          0.0101318359375,
+          0.01641845703125
+        ],
+        "radius_kernel": [
+          5.17633056640625,
+          5.33099365234375
+        ],
+        "radius_path_exclusive": [
+          0.115692138671875,
+          0.6656494140625
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "free": 2,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9986272760980763,
+      "counters": {
+        "builds": 2,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "cache_bytes": 12659072,
+        "fallbacks": 0
+      }
+    },
+    {
+      "dataset": "scannet",
+      "scene": "scene0231_01_inst_nostuff",
+      "size": "large",
+      "model": "pointvector",
+      "method": "session",
+      "voxel_n": 297866,
+      "repetitions": 5,
+      "whole_gpu_ms_mean": 580.6098754882812,
+      "whole_wall_ms_mean": 580.7827799995721,
+      "exclusive_component_ms_mean": {
+        "build": 4.1341796875,
+        "cache_hit_path_exclusive": 4.220709228515625,
+        "free": 0.0049560546875,
+        "neural_sampling_and_remaining": 561.035302734375,
+        "nn_kernel": 2.59677734375,
+        "nn_path_exclusive": 0.6785400390625,
+        "radius_kernel": 5.45390625,
+        "radius_path_exclusive": 2.485504150390625
+      },
+      "display_categories_ms_mean": {
+        "build": 4.1341796875,
+        "radius_query_including_adapter": 7.939410400390625,
+        "three_nn_including_adapter": 3.2753173828125,
+        "cache_hit_path": 4.220709228515625,
+        "free": 0.0049560546875,
+        "other_neural_and_sampling": 561.035302734375
+      },
+      "component_ranges_ms": {
+        "build": [
+          3.63214111328125,
+          4.536224365234375
+        ],
+        "cache_hit_path_exclusive": [
+          3.75140380859375,
+          4.964599609375
+        ],
+        "free": [
+          0.00408935546875,
+          0.0062255859375
+        ],
+        "neural_sampling_and_remaining": [
+          559.0267944335938,
+          562.1637268066406
+        ],
+        "nn_kernel": [
+          2.57373046875,
+          2.6649169921875
+        ],
+        "nn_path_exclusive": [
+          0.54931640625,
+          0.91064453125
+        ],
+        "radius_kernel": [
+          5.40521240234375,
+          5.499481201171875
+        ],
+        "radius_path_exclusive": [
+          1.655364990234375,
+          3.82525634765625
+        ]
+      },
+      "counts": {
+        "build": 2,
+        "radius_kernel": 5,
+        "radius_path": 5,
+        "cache_hit_path": 9,
+        "nn_kernel": 4,
+        "nn_path": 4,
+        "free": 2
+      },
+      "profile_wall_to_preceding_warm_median_ratio": 0.9999981035536266,
+      "counters": {
+        "builds": 2,
+        "tree_reuses": 7,
+        "ball_calls": 14,
+        "ball_hits": 9,
+        "nn_calls": 4,
+        "coordinate_comparisons": 31,
+        "snapshot_bytes": 6548364,
+        "cache_bytes": 22190720,
+        "fallbacks": 0
+      }
+    }
+  ],
+  "environment": {
+    "gpu": [
+      "NVIDIA GeForce RTX 4060 Laptop GPU"
+    ],
+    "torch": [
+      "2.9.0+cu128"
+    ],
+    "cpu_threads": 4,
+    "cudnn_benchmark": false,
+    "matmul_tf32": false,
+    "input_seed": 20261070,
+    "precision": "FP32 query/model input; unchanged frozen neural implementation"
+  }
+}

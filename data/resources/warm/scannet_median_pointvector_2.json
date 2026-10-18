@@ -1,0 +1,838 @@
+{
+  "status": "PASS",
+  "dataset": "scannet",
+  "size": "median",
+  "scene": "scene0697_01_inst_nostuff",
+  "model": "pointvector",
+  "block": 2,
+  "voxel_n": 100801,
+  "input_indices_sha256": "f386e3b8d15cd68bda276f71b9865b6510c4a3ce1576eb4aa8acf16fe1343090",
+  "all_logits_bitexact_to_original": true,
+  "warmup_drift": {
+    "flash": {
+      "median_last5_over_previous5": 0.9974928465288182,
+      "last10_ms": [
+        258.0253999985871,
+        257.9171000033966,
+        258.3009000009042,
+        258.4010999999009,
+        258.41760000184877,
+        257.273899995198,
+        257.6533000028576,
+        257.5081000031787,
+        258.8395999991917,
+        257.8375999946729
+      ]
+    },
+    "frozen": {
+      "median_last5_over_previous5": 0.9969615291198116,
+      "last10_ms": [
+        127.9590999984066,
+        127.66109999938635,
+        127.64189999870723,
+        128.0546999987564,
+        128.5615000015241,
+        129.0249000012409,
+        126.55430000449996,
+        130.62060000083875,
+        127.30720000399742,
+        127.57029999920633
+      ]
+    },
+    "session": {
+      "median_last5_over_previous5": 1.018057677572567,
+      "last10_ms": [
+        131.4704999967944,
+        136.78349999827333,
+        134.62279999657767,
+        132.3426000017207,
+        131.99229999736417,
+        137.38110000122106,
+        134.96139999915613,
+        134.73240000166697,
+        133.28679999540327,
+        131.65250000020023
+      ]
+    }
+  },
+  "measurements": [
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 489.4454000022961,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 135.05770000483608,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 0,
+      "wall_ms": 137.51570000022184,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 126.15990000631427,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 132.37360000493936,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 1,
+      "wall_ms": 257.35469999926863,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 131.91999999980908,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 256.64920000417624,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 2,
+      "wall_ms": 128.28129999979865,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 257.99369999731425,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 126.51889999688137,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 3,
+      "wall_ms": 131.6023999970639,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 126.75099999614758,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 133.7305000051856,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 4,
+      "wall_ms": 257.53229999827454,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 133.29269999667304,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 256.6064999991795,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 5,
+      "wall_ms": 129.1267999986303,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 257.58650000352645,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 127.16920000093523,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 6,
+      "wall_ms": 133.08490000054007,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 127.32600000163075,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 134.91200000134995,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 7,
+      "wall_ms": 257.6526999982889,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 133.8748999987729,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 257.1886000005179,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 8,
+      "wall_ms": 130.84730000264244,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 257.40159999986645,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 128.8233000013861,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 9,
+      "wall_ms": 135.2950000000419,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 127.42959999741288,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 136.86109999980545,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 10,
+      "wall_ms": 258.2394999990356,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 133.64349999756087,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 258.90910000453005,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 11,
+      "wall_ms": 134.57809999817982,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 258.3066000006511,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 127.87860000389628,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 12,
+      "wall_ms": 132.8088000009302,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 127.55570000445005,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 133.95540000055917,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 13,
+      "wall_ms": 258.5172999970382,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 134.36820000060834,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 258.69190000230446,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 14,
+      "wall_ms": 127.34910000290256,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 258.6007999998401,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 127.75360000523506,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 15,
+      "wall_ms": 134.88250000227708,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 127.5889999960782,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 133.5185999996611,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 16,
+      "wall_ms": 258.1807000024128,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 132.7504000000772,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 257.9388999947696,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 17,
+      "wall_ms": 127.609900002426,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 257.97740000416525,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 128.19260000105714,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 18,
+      "wall_ms": 134.09020000108285,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 129.0750999978627,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 133.2062000001315,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 19,
+      "wall_ms": 257.8109000023687,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 131.4704999967944,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 258.0253999985871,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 20,
+      "wall_ms": 127.9590999984066,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 257.9171000033966,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 127.66109999938635,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 21,
+      "wall_ms": 136.78349999827333,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 127.64189999870723,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 134.62279999657767,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 22,
+      "wall_ms": 258.3009000009042,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 132.3426000017207,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 258.4010999999009,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 23,
+      "wall_ms": 128.0546999987564,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 258.41760000184877,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 128.5615000015241,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 24,
+      "wall_ms": 131.99229999736417,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 129.0249000012409,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 137.38110000122106,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 25,
+      "wall_ms": 257.273899995198,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 134.96139999915613,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 257.6533000028576,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 26,
+      "wall_ms": 126.55430000449996,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 257.5081000031787,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 130.62060000083875,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 27,
+      "wall_ms": 134.73240000166697,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 127.30720000399742,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 133.28679999540327,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 28,
+      "wall_ms": 258.8395999991917,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 131.65250000020023,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 257.8375999946729,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "warmup",
+      "cycle": 29,
+      "wall_ms": 127.57029999920633,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 258.7592999989283,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 126.9724999947357,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 30,
+      "wall_ms": 135.57810000202153,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 127.83350000245264,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 134.15639999584528,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 31,
+      "wall_ms": 257.8725999992457,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 132.62760000361595,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 257.51770000351826,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 32,
+      "wall_ms": 129.1105999989668,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 258.8924000010593,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 127.60910000361037,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 33,
+      "wall_ms": 133.12049999512965,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 126.58779999765102,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 130.51959999575047,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 34,
+      "wall_ms": 257.4823000031756,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 133.5904999941704,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 257.64540000091074,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 35,
+      "wall_ms": 126.6438999955426,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "flash",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 258.71429999824613,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "frozen",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 127.46619999961695,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    },
+    {
+      "method": "session",
+      "phase": "measured",
+      "cycle": 36,
+      "wall_ms": 130.54209999972954,
+      "logits_sha256": "91f0f0c155dffa978ea646c1b506a19b5651f4f08d6d9b5b0bfbf8e624adff1e"
+    }
+  ],
+  "profiles": []
+}

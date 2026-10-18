@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "dataset": "s3dis",
+  "model": "pointnext",
+  "scene": "Area_5_office_16",
+  "seed": 20261067,
+  "voxel_n": 50678,
+  "input_sha256": "1a0de1613f878afc7c47afe783e76a67f701eb3cf28b73916745294f5c69e042",
+  "source_data_sha256": "a87776f080047f5426979c413b0b0a53ece8dca7be65f90961685086b58925a3",
+  "reference_logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9",
+  "all_logits_bitexact": true,
+  "methods": {
+    "flash": [
+      {
+        "repeat": 0,
+        "wall_ms": 90.42670000053477,
+        "gpu_ms": 90.36953735351562,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 90.1780999993207,
+        "gpu_ms": 90.12246704101562,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 90.64409999700729,
+        "gpu_ms": 90.5697250366211,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 89.99019999828306,
+        "gpu_ms": 89.93353271484375,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 90.05830000023707,
+        "gpu_ms": 89.99171447753906,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      }
+    ],
+    "frozen": [
+      {
+        "repeat": 0,
+        "wall_ms": 52.675400002044626,
+        "gpu_ms": 52.5799674987793,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 53.188599998975405,
+        "gpu_ms": 53.125823974609375,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 53.766799999721115,
+        "gpu_ms": 53.71120071411133,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 52.65199999848846,
+        "gpu_ms": 52.591712951660156,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 54.49420000149985,
+        "gpu_ms": 54.44099044799805,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      }
+    ],
+    "session": [
+      {
+        "repeat": 0,
+        "wall_ms": 59.01560000347672,
+        "gpu_ms": 58.979488372802734,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 1,
+        "wall_ms": 56.16590000136057,
+        "gpu_ms": 56.12255859375,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 2,
+        "wall_ms": 56.0116000015114,
+        "gpu_ms": 55.97798538208008,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 3,
+        "wall_ms": 56.885800000600284,
+        "gpu_ms": 56.845375061035156,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      },
+      {
+        "repeat": 4,
+        "wall_ms": 56.14620000051218,
+        "gpu_ms": 56.099422454833984,
+        "logits_sha256": "f0801145abb89db53ed5fa1a2e590601dc566627fecf5d25e8c5a684dfccf3b9"
+      }
+    ]
+  },
+  "counters": {
+    "flash": {},
+    "frozen": {
+      "builds": 2,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "cache_bytes": 2153472,
+      "fallbacks": 0
+    },
+    "session": {
+      "builds": 2,
+      "tree_reuses": 3,
+      "ball_calls": 14,
+      "ball_hits": 9,
+      "nn_calls": 4,
+      "coordinate_comparisons": 25,
+      "snapshot_bytes": 1125936,
+      "cache_bytes": 3775104,
+      "fallbacks": 0
+    }
+  }
+}
